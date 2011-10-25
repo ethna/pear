@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Ethna</name>
+ <channel>pear.ethna.jp</channel>
+ <summary>Ethna PHP Framework Package</summary>
+ <description>Ethna Web Application Framework</description>
+ <lead>
+  <name>Masaki Fujimoto</name>
+  <user>fujimoto</user>
+  <email>fujimoto@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>halt feits</name>
+  <user>halt</user>
+  <email>halt.feits@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Keita Arai</name>
+  <user>cocoitiban</user>
+  <email>cocoiti@comio.info</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>ICHII Takashi</name>
+  <user>ichii386</user>
+  <email>ichii386@schweetheart.jp</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-10-18</date>
+ <time>03:07:43</time>
+ <version>
+  <release>2.5.0</release>
+  <api>2.5.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">The BSD License</license>
+ <notes>
+Ethna PHP Web Application Framework
+ </notes>
+ <contents>
+  <dir baseinstalldir="Ethna" name="/">
+   <file baseinstalldir="/" md5sum="05811530c7b6a76f48c7ee290e5ba95a" name="bin/ethna.bat" role="script">
+    <tasks:replace from="@PEAR-DIR@" to="php_dir" type="pear-config" />
+    <tasks:replace from="@PHP-BIN@" to="bin_dir" type="pear-config" />
+   </file>
+   <file baseinstalldir="/" md5sum="46dfcee1001a1a1eb720c64788774c32" name="bin/ethna.sh" role="script">
+    <tasks:replace from="@PHP-BINARY@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@PEAR-DIR@" to="php_dir" type="pear-config" />
+    <tasks:replace from="@PHP-BIN@" to="bin_dir" type="pear-config" />
+   </file>
+   <file baseinstalldir="Ethna" md5sum="a2973f134ae9f13da91a073b7776287f" name="bin/ethna_handle.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="449bad1fe864abebd6486858e51795df" name="bin/ethna_run_test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="fafe26f3a8da9cab19bc6e42b8de61c7" name="bin/ethna_run_test.sh" role="php" />
+   <file baseinstalldir="Ethna" md5sum="81b9062625abcf0897904a26ebbb22bb" name="class/Ethna_ActionClass.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="80decb3c544500448f6fade085a96ff0" name="class/Ethna_ActionError.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7cf1b0293c0e288b7fe1e89067253498" name="class/Ethna_ActionForm.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="58a4dbbddf3af66edc749411ed3871f0" name="class/Ethna_AppManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="416d92c9e55d483e623bf1595e020c7b" name="class/Ethna_AppObject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ed0aaeefe20ec55427b770c6b34b7bfb" name="class/Ethna_AppSearchObject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="23b178a58d89db55a4edd425f3a0e038" name="class/Ethna_AppSQL.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c52d553097a63dcb776b4d254b6ae64c" name="class/Ethna_Backend.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6ecd3c59d5a7722e96a4004d639d5636" name="class/Ethna_CacheManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="25c254eb9eeee8ef477b0a950285976c" name="class/Ethna_ClassFactory.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0f8dda9208e985fdd4828104970273d7" name="class/Ethna_Config.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3f35dd4f00b1d4f9cb2abae505546e23" name="class/Ethna_Controller.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ecf467d16eafa472764406fa4d092fef" name="class/Ethna_DB.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="75554e1e684026724cb34e1951065b12" name="class/Ethna_Error.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="9531fc4d71f26f08931a1d35d2fb3136" name="class/Ethna_Filter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2ba75daed576d738b3788d9242cf2530" name="class/Ethna_Generator.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c27262b366d9b0876198df31424768fb" name="class/Ethna_Getopt.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7187a62c7fbc7e4fd229b86bbf7efd31" name="class/Ethna_Handle.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="8992a917d6feb6744c05e7f424822bab" name="class/Ethna_I18N.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b7c91fc38b0ddd6d36f60743fe17dfa1" name="class/Ethna_InfoManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5511c5058e28501e2c7519cbf55b0c66" name="class/Ethna_Logger.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="934aa73b21c3f99cdd0c1f45c4efc147" name="class/Ethna_MailSender.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2238103c38b9b7df240c199e1199902c" name="class/Ethna_PearWrapper.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="840278aa11fe3b503e4e0b62a531e2fb" name="class/Ethna_Plugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="541965513cb84e963140d14dcb01818a" name="class/Ethna_Renderer.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="9a56b05037cba0b12fcb91a85ef18484" name="class/Ethna_Session.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e034100c740632572b047ea338753733" name="class/Ethna_UnitTestCase.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d1c97ed441a7d033a897a49e6ad3cc92" name="class/Ethna_UnitTestManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="cabae7aa55ecf81aab03e24a08bf21e3" name="class/Ethna_UnitTestReporter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b96a02ba70102bff9b8b490230d73132" name="class/Ethna_UrlHandler.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="181651925bc6dd0b2b3b4c823e109c6f" name="class/Ethna_Util.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6c9d4baf20d5a27647162c3ecf1b6567" name="class/Ethna_ViewClass.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6f5c3bc2b2d015ca1fb75e25ca2f92be" name="class/Action/Ethna_Action_Info.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="acc3cdbc5e21c9daafe7f5f5f7be8c32" name="class/Action/Ethna_Action_UnitTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="977511e2f6b862df73cdf0f14908f73d" name="class/CLI/Ethna_CLI_ActionClass.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="48733f1e64c69894f8a52126c1764704" name="class/DB/Ethna_DB_ADOdb.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a825ec3fa7faa25e1480d27b61360b06" name="class/DB/Ethna_DB_Creole.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="67c43082ec27653e61221467394ff018" name="class/DB/Ethna_DB_PEAR.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="290290828ea4d3a9bdd74c41db2600e5" name="class/Plugin/Ethna_Plugin_Cachemanager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="69ed4bfa13922e211274448b67cee5ec" name="class/Plugin/Ethna_Plugin_Csrf.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="aa1bb9523c4b112c19e250957d725358" name="class/Plugin/Ethna_Plugin_Filter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="86a45d4c5068477c6fc6e6d280f72de6" name="class/Plugin/Ethna_Plugin_Generator.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a20319636ec0a692a1bdde2cc0258366" name="class/Plugin/Ethna_Plugin_Handle.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a0cb7243c490bbfce3bd4e5441eb4cb2" name="class/Plugin/Ethna_Plugin_Logwriter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="dd9495a53cae39db13ed05f740cceb39" name="class/Plugin/Ethna_Plugin_Urlhandler.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="36f89e70b97ea222be779774dcd99ec2" name="class/Plugin/Ethna_Plugin_Validator.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="552ca7bc22a7e9bbe753b73121a7d490" name="class/Plugin/Cachemanager/Ethna_Plugin_Cachemanager_Localfile.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bcf378bec044edfb6b524c0f3d49add1" name="class/Plugin/Cachemanager/Ethna_Plugin_Cachemanager_Memcache.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="696ffd385ec32bf6b966b5fb25003320" name="class/Plugin/Csrf/Ethna_Plugin_Csrf_Session.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e4ba8aad562772b81c802ca0d14b23b6" name="class/Plugin/Generator/Ethna_Plugin_Generator_Action.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e079e6ae6ef0fea9bbba701f662a963f" name="class/Plugin/Generator/Ethna_Plugin_Generator_ActionTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="66a0150604ced065c3d2720dea874e8b" name="class/Plugin/Generator/Ethna_Plugin_Generator_AppManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="69a9fbc3ab4b587b21076bd7aceaf67e" name="class/Plugin/Generator/Ethna_Plugin_Generator_AppObject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a350c24c9d83239de74c67dd40918bae" name="class/Plugin/Generator/Ethna_Plugin_Generator_EntryPoint.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="427957edf8dabc48031abe82e38bb552" name="class/Plugin/Generator/Ethna_Plugin_Generator_I18n.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="216105a1e9eeb4993718389b73eade11" name="class/Plugin/Generator/Ethna_Plugin_Generator_Plugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ed79e208dd0cf0f6cc3622ab8bd9e570" name="class/Plugin/Generator/Ethna_Plugin_Generator_Project.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="996fac3a8ec97de498b5c2cd6bf721ef" name="class/Plugin/Generator/Ethna_Plugin_Generator_Template.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c6262bd736f2bf7fb69b68181823375e" name="class/Plugin/Generator/Ethna_Plugin_Generator_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="756701720cba09fae1756e36235a230f" name="class/Plugin/Generator/Ethna_Plugin_Generator_View.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bd33d76d94abd1aefff60e94e1a4b9a6" name="class/Plugin/Generator/Ethna_Plugin_Generator_ViewTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2c51cb637a104236347e8f4c9c2cef4c" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddAction.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="1bcb2c87b07688d22e29b22a9e288e4e" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddActionTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="03a331b97fa32f7dcf6697b679538671" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddAppManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="4e6ebbf500e06ef7e364138bd373bec4" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddAppObject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="da89c2df9e47906317678635e18661c6" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddEntryPoint.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d90a0da0133001386e9349141941081e" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddProject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b46e3961f14ac6dfa5f742b632d006a4" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddTemplate.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5c3358654ef102f8f57740415ccc4cd6" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="01e378b134e400531f0b3ccb5c3b9fd7" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddView.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3a4f63a07faef8bc5d5970293f08adf4" name="class/Plugin/Handle/Ethna_Plugin_Handle_AddViewTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="25d0cf65b659735a26e04fadf5f44723" name="class/Plugin/Handle/Ethna_Plugin_Handle_ChannelUpdate.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a4ef5f5528a50c314585ef45577e60e1" name="class/Plugin/Handle/Ethna_Plugin_Handle_ClearCache.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="dcf5948eb2d730b3da23f403e3727b02" name="class/Plugin/Handle/Ethna_Plugin_Handle_Help.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="368decb7b70b6667155a03f24f8f9b13" name="class/Plugin/Handle/Ethna_Plugin_Handle_I18n.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="596b7220ae9a847c51dbfeca772f4473" name="class/Plugin/Handle/Ethna_Plugin_Handle_InfoPlugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f3229f0834186da5803898f22f726876" name="class/Plugin/Handle/Ethna_Plugin_Handle_InstallPlugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="94aa40bc0a51056158be8de5292bf957" name="class/Plugin/Handle/Ethna_Plugin_Handle_ListPlugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="35996f33ade751ba2f29a02af7d0d397" name="class/Plugin/Handle/Ethna_Plugin_Handle_MakePluginPackage.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ca8f3c3c749e0af539d90d1805ce5822" name="class/Plugin/Handle/Ethna_Plugin_Handle_PearLocal.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="68f8130b588a8c287749bbd47405750d" name="class/Plugin/Handle/Ethna_Plugin_Handle_UninstallPlugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="698209ffde862b3769b469cf604bc198" name="class/Plugin/Handle/Ethna_Plugin_Handle_UpgradePlugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="4a67fc9c6cc9fd4841c81a25d79122f0" name="class/Plugin/Logwriter/Ethna_Plugin_Logwriter_Alertmail.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="4cbcc00999e8bda81858490b9098d306" name="class/Plugin/Logwriter/Ethna_Plugin_Logwriter_Default.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="361c1209928a73c4b09c60f1767ec1f0" name="class/Plugin/Logwriter/Ethna_Plugin_Logwriter_Echo.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e285e3f19eddf6eafaa8d60bf0ac1de7" name="class/Plugin/Logwriter/Ethna_Plugin_Logwriter_File.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3ca923fd68f1b595296e206b44bf8a70" name="class/Plugin/Logwriter/Ethna_Plugin_Logwriter_Syslog.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7d2c6468515b777f3e1922e012f18fca" name="class/Plugin/Smarty/block.form.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c158ef3f97b5a17e22f924e69d69228a" name="class/Plugin/Smarty/function.checkbox_list.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e1757ba2b67944a082da4a75d5cfbc13" name="class/Plugin/Smarty/function.csrfid.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6f66c2c695a4cdca576760cb9ad70169" name="class/Plugin/Smarty/function.form_input.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ad94acc3f2672c45e5d06cc7db1af8e2" name="class/Plugin/Smarty/function.form_name.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="4cf7e0f96e8c16e914d7548bca8c3f21" name="class/Plugin/Smarty/function.form_submit.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="62902e4d20191d5a6aba7e9719864371" name="class/Plugin/Smarty/function.is_error.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="94882a073b193a734631eac96759cf53" name="class/Plugin/Smarty/function.message.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="75ecac1d40f02b3c824d50768c503139" name="class/Plugin/Smarty/function.select.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a3bab3332d416b77422839dd65bf80b8" name="class/Plugin/Smarty/function.uniqid.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f8ff7f4ebd256bea856006644fc2603a" name="class/Plugin/Smarty/function.url.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="45960e000951e06b02150559fde5d11a" name="class/Plugin/Smarty/modifier.checkbox.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="59c9fd62cdae1f77d563d6438315653e" name="class/Plugin/Smarty/modifier.count.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b2219d05053b791df63e55b8c72c526c" name="class/Plugin/Smarty/modifier.explode.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="26f5bd288527de7ff1ef86dd9d2da8e8" name="class/Plugin/Smarty/modifier.filter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b6832c925de31eaa079b7a4322c2d9d2" name="class/Plugin/Smarty/modifier.form_value.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="fa28c29e5f0e906f108025ec98beae2b" name="class/Plugin/Smarty/modifier.i18n.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="162b4c189fcdcaa5ac8d6ed134afcff3" name="class/Plugin/Smarty/modifier.join.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2bdc805ed2c55c683eec81706aa67034" name="class/Plugin/Smarty/modifier.number_format.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="84aeffea5c2d0bcc5e50060819f56ea0" name="class/Plugin/Smarty/modifier.select.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c36ceed6ab929b657eec22907e641c64" name="class/Plugin/Smarty/modifier.strftime.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="336308b95e678c36a4eb879218fadb77" name="class/Plugin/Smarty/modifier.truncate_i18n.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="55b915a8f5487348b2b24a4b0c5f1e83" name="class/Plugin/Smarty/modifier.unique.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="450a3d2984f3f56db3af19f6fc6f8917" name="class/Plugin/Smarty/modifier.wordwrap_i18n.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="10cbefdca98fa571dffc2abdb38edfb3" name="class/Plugin/Validator/Ethna_Plugin_Validator_Custom.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="fa937ce84862f256f600041a121d154a" name="class/Plugin/Validator/Ethna_Plugin_Validator_File.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0553874247766fd1bfd03b9ecafd06ea" name="class/Plugin/Validator/Ethna_Plugin_Validator_Max.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d7be6c59acb60eec03b898a1895f85c3" name="class/Plugin/Validator/Ethna_Plugin_Validator_Mbregexp.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ee18069473f931cec96c3e45b6bfdc3d" name="class/Plugin/Validator/Ethna_Plugin_Validator_Mbstrmax.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="410f1c1196f03bf649626703898a8356" name="class/Plugin/Validator/Ethna_Plugin_Validator_Mbstrmin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6cfc16356286bc2eb33c51d06b32f146" name="class/Plugin/Validator/Ethna_Plugin_Validator_Min.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e6e02c1b6cc4373638d493de07da2c4a" name="class/Plugin/Validator/Ethna_Plugin_Validator_Regexp.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="01fb124c58f46ca41178b700b54a96a3" name="class/Plugin/Validator/Ethna_Plugin_Validator_Required.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="224e8f82dff0078eeb129eda586d3092" name="class/Plugin/Validator/Ethna_Plugin_Validator_Strmax.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="edfc49b6c701024ade34940b77781078" name="class/Plugin/Validator/Ethna_Plugin_Validator_Strmaxcompat.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="394e02160d914793f59e525d6dc24ed2" name="class/Plugin/Validator/Ethna_Plugin_Validator_Strmin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="474a21969e71d81a00ff014cbbae5998" name="class/Plugin/Validator/Ethna_Plugin_Validator_Strmincompat.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a06093a55b11c63728c7b7334df67c81" name="class/Plugin/Validator/Ethna_Plugin_Validator_Type.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a5ffc1e71138b8ce7f035bf9586c774d" name="class/Renderer/Ethna_Renderer_Rhaco.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="dd20c52033f272c8aa859fa591fb6812" name="class/Renderer/Ethna_Renderer_Smarty.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2d4d47aba07a001f070ee2b34007d4e7" name="class/SOAP/Ethna_SOAP_ActionForm.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a9f55c51b80a51a82f1113dd134c8ac2" name="class/SOAP/Ethna_SOAP_Gateway.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d68db1ecbdc00ffad41b80abc8ec0ff2" name="class/SOAP/Ethna_SOAP_GatewayGenerator.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b4b48d6e5747b05bbc76331c6c515ac6" name="class/SOAP/Ethna_SOAP_Util.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="95b6c49233a0392b4dcf812ee6d6ae1f" name="class/SOAP/Ethna_SOAP_WsdlGenerator.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c780c04cf9d397c3e78bc9086cecda8e" name="class/View/Ethna_View_Info.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d076acb8d65cc5e5c2cbe9bd86e760ab" name="class/View/Ethna_View_List.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="33f4c50260fc7351aab2ee1fbad4e745" name="class/View/Ethna_View_UnitTest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="05e5650b30454c89c07e08570ac6d3c9" name="misc/ethna_zsh_config" role="php" />
+   <file baseinstalldir="Ethna" md5sum="97dd79259c3311440d0bf78103bafcbf" name="misc/sample_package.ini" role="php" />
+   <file baseinstalldir="Ethna" md5sum="50e2e445ca4fddcedcd659062300dc31" name="misc/sample_plugin.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="941ece2ee771204f034b5d6f55d922c5" name="skel/app.action.default.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5142f82b13f0fc2603120a0d581509ac" name="skel/app.actionclass.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0d2f481431452be40c0fa0e66ff756eb" name="skel/app.actionform.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="10d30e5af88d58857d3b2174ff464ab8" name="skel/app.controller.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="dcd7466f705f163d6627c7a80393984a" name="skel/app.error.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0150e9b20a19707d9ffa00f3808560e4" name="skel/app.plugin.filter.default.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5bd634eab58cfcb8992dac0ce653a708" name="skel/app.unittest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2d767974ddad8fec8a0d788dcd406233" name="skel/app.url_handler.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c42e605b100ccd0911d0d7791f86cd8e" name="skel/app.view.default.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="81eedc172637bdae6a9c71ebf4732431" name="skel/app.viewclass.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5b38709cb74779294a74b953f1127380" name="skel/dot.ethna" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f0020eda0965230525ea905a07a57250" name="skel/etc.ini.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2a328000013aae80d74679d731665060" name="skel/skel.action.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2c6ab19fcd1f731c4e85d30d1a9337a4" name="skel/skel.action_cli.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bd1a66f91bf3e27f24b800aa46bce57d" name="skel/skel.action_test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2be7f857486d40804b19c2834de65f53" name="skel/skel.action_xmlrpc.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="10d800ddd980d2038a3d536fcf552b78" name="skel/skel.app_manager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="e50ecaf517fd3334ad88a3df8a013a5f" name="skel/skel.app_object.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="14b7846cd4db105f973e87c2c30fbeda" name="skel/skel.entry_cli.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0f3bd9332c9e82151372457e4b89e026" name="skel/skel.entry_www.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="de5dc5580db5059a388068a76c80660d" name="skel/skel.template.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d5a0236c52721563c6c62c2ee93f6c82" name="skel/skel.test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a3e4889f621b1a917573384474ea4281" name="skel/skel.view.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="a7f86880137e5b152bb0d254d8851630" name="skel/skel.view_test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="840eddbe08916227c18f37c136380e69" name="skel/template.index.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="989b215460089337250498f2279371ba" name="skel/www.css.ethna.css" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5be84603c17d2110668afc113955a99a" name="skel/www.index.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="73661d34fcf842b02998fc5a2c351030" name="skel/www.info.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f20d57c86239191883a5b1cd481ef3f4" name="skel/www.unittest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c8dbbbc25ba3c9fd306fe77236f33760" name="skel/www.xmlrpc.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="61c25e6d49e1b7175264bdc73b1496e4" name="skel/locale/ethna_sysmsg.default.ini" role="php" />
+   <file baseinstalldir="Ethna" md5sum="1239b0039a9dea0c1475f3e539bf7116" name="skel/locale/skel.msg.ini" role="php" />
+   <file baseinstalldir="Ethna" md5sum="71af693fcfdfcad547da0d1b69aecbc0" name="skel/locale/skel.msg.po" role="php" />
+   <file baseinstalldir="Ethna" md5sum="750cd36dcaba4fea7a29d4174c90f181" name="skel/locale/ja_JP/ethna_sysmsg.ini" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2c352c17836283e7409ead56da0d9c6d" name="test/Ethna_ActionError_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="920ac44c267d79e88a01ebf206262ee9" name="test/Ethna_ActionForm_Filter_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f7364e77090b668a2d3e2cc254ff2db8" name="test/Ethna_ActionForm_FormTemplate_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ff92ee819f22a6dac93ecb04726eeecb" name="test/Ethna_ActionForm_MultiArray_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ecf2e6b9671708247a9bc33fe4995bc3" name="test/Ethna_ActionForm_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="171fa49736a51f7d15b51f2f9a0cf1be" name="test/Ethna_ActionForm_Validator_Custom_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="d6fd58ca83a1facf97c271fb4e46e0f4" name="test/Ethna_ActionForm_Validator_Max_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b1cf1e4ef4e3ba806b72d25caf9325b5" name="test/Ethna_ActionForm_Validator_Mbregexp_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3d5d3c0ca01bc7cc25a5f1e450587995" name="test/Ethna_ActionForm_Validator_Mbstrmax_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="4363833f1e435523dfa7d92eeebf65e5" name="test/Ethna_ActionForm_Validator_Mbstrmin_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ce5b2623781f61ef574d0c38cb8730e6" name="test/Ethna_ActionForm_Validator_Min_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ecf0497a8ee1e029b000305bd29550d9" name="test/Ethna_ActionForm_Validator_Regexp_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bfff6791663920913b4a45b21e4a09d6" name="test/Ethna_ActionForm_Validator_Required_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7629b8775be194ca4bd002081876b8bc" name="test/Ethna_ActionForm_Validator_Strmaxcompat_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7523441d54b67e9cf250954172da1bc6" name="test/Ethna_ActionForm_Validator_Strmax_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="21aededc53076bb0466f55e8690c6fa5" name="test/Ethna_ActionForm_Validator_Strmincompat_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="da0770a476c538f363c9a18b30ec329a" name="test/Ethna_ActionForm_Validator_Strmin_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="27e244acfacb88fe1176f4c27462711d" name="test/Ethna_ActionForm_Validator_Type_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="416f99480d659da42df933c9221cf813" name="test/Ethna_ClassFactory_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="72afd718138d643955e36fbd8138175d" name="test/Ethna_Class_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b0607f135cf4682280b729285a4971f3" name="test/Ethna_Config_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f5f71236f8487eb5e2805db50c30db3d" name="test/Ethna_Controller_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2f9f00f5913179ab42a77be78703bb6e" name="test/Ethna_Error_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="8256e0f3f9e00fd14d68d6d07fbb0e11" name="test/Ethna_Getopt_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="46fd6750f60243cfad32cd3706f42a3c" name="test/Ethna_I18N_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="705d813b6f082cbd31bb13034b0422d1" name="test/Ethna_Logger_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="56f1fddecaef7b0fe6093d9003ee6321" name="test/Ethna_MockProject.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7232f87467814617e570f2d6ec6de961" name="test/Ethna_MocktestManager.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2cd356e235fd594a234e130a0c008a56" name="test/Ethna_Session_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="1b1761f1fc31c4d5e0a45f5d7d42d981" name="test/Ethna_UnitTestBase.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="8b05361789fbf3547ca5ef1a16bf9808" name="test/Ethna_UrlHandler_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="05195e453fd3149515a7c712ab8ae5b4" name="test/Ethna_Util_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="394bb3b74b4f2dbbfcafc192444b7bdd" name="test/Ethna_ViewClass_FormHelper_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3574434ec31eb2e5e00b3194dda91c3a" name="test/Ethna_ViewClass_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f8d47c86ea4fb91bfb7e23be116f42a4" name="test/run_test.stdin.txt" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b652abfa5874fd2990a5095b86965eae" name="test/test_message_catalog.ini" role="php" />
+   <file baseinstalldir="Ethna" md5sum="9d3fe89ef012c24b7a4a39fd3b8a7cab" name="test/TextDetailReporter.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="903506c9fdc98de382172b29956ffd89" name="test/Plugin/Cachemanager/Ethna_Plugin_Cachemanager_Localfile_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0b63a30c55d3b962bb4925bdaacf657e" name="test/Plugin/Csrf/Ethna_Plugin_Csrf_Session_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3e0954b7c47682556c5406bbc7eb1d36" name="test/Plugin/Handle/Ethna_Plugin_Handle_AddTemplate_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bb3f51fd22bf11241aa6e72d579611dc" name="test/Plugin/Handle/Ethna_Plugin_Handle_I18n_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b103a964cdfae835ea1b795210c9e7f8" name="test/Plugin/Handle/Ethna_Plugin_Handle_PearLocal_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="9062b4f3442f9aaed96877e8e2fbf0e7" name="test/Plugin/Logwriter/Ethna_Plugin_Logwriter_Echo_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ec44bf4246893fe8410f11620747c18e" name="test/Plugin/Logwriter/Ethna_Plugin_Logwriter_File_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="98be4bda9f4d12d6222e4a9b7f380ff7" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_function_select_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="cbe4aa4e601082713a31a42931ca1b88" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_modifier_checkbox_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="0a04cecd48811ecfc4a2f7f91f168c25" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_modifier_explode_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="bdc3b070d081f1d0bdff0dd43f72faad" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_modifier_select_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c977b3e31f43aa1a184082c1ca182bb5" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_modifier_unique_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="86e6e20c9ca7bfbb7274a4161496429e" name="test/Plugin/Smarty/Ethna_Plugin_Smarty_modifier_wordwrap_i18n_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="2ae6b1c1b78788ea91d63f2739daed0f" name="test/Plugin/Validator/Ethna_Plugin_Validator_Custom_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="1650e70de2a13846f1fb1680f38e613a" name="test/Plugin/Validator/Ethna_Plugin_Validator_Max_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="6fc86bd395c4129b0c59c03dec44d532" name="test/Plugin/Validator/Ethna_Plugin_Validator_Mbregexp_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="543eaad0282d9dd49720880dd5e3c126" name="test/Plugin/Validator/Ethna_Plugin_Validator_Mbstrmax_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="c82b19d540617dceeda83039f683a940" name="test/Plugin/Validator/Ethna_Plugin_Validator_Mbstrmin_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7d870c02f7a3706c35e74aa6e8053e15" name="test/Plugin/Validator/Ethna_Plugin_Validator_Min_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b8f45f05d4aa6ab3e9a4d7c24dcfe4d9" name="test/Plugin/Validator/Ethna_Plugin_Validator_Regexp_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="de40c8e901381b6335a03aeb4262eaa2" name="test/Plugin/Validator/Ethna_Plugin_Validator_Required_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="51e0c00024d3e34a48672e4fc8c004e8" name="test/Plugin/Validator/Ethna_Plugin_Validator_Strmaxcompat_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="ed076f2197f846d237ccd4eb5b1d742a" name="test/Plugin/Validator/Ethna_Plugin_Validator_Strmax_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="93497e696b37ff4340b27cec2034ff1b" name="test/Plugin/Validator/Ethna_Plugin_Validator_Strmincompat_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="933cd852a6e01949941ee5e47c0c8b42" name="test/Plugin/Validator/Ethna_Plugin_Validator_Strmin_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="3d97b286de9ccf993da55b545fec4dd8" name="test/Plugin/Validator/Ethna_Plugin_Validator_Type_Test.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="06155d8a91c15b6418a09e318d0475b7" name="test/skel/app.controller.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="68e5ab9d4c91d34ce6b9945873190df3" name="test/skel/skel.action.formhelper.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5a92482023b86a2068a062b8d05b6fa0" name="test/skel/skel.action.i18ntest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="83fff54e56b3a1faf7c193f8dd04f2d4" name="test/skel/skel.view.i18ntest.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="b8d18d99a53d4447cdae3b8ebed3284e" name="test/skel/template/skel.template.blockform.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="20cecd2b81eef146d8bf9eb01f649370" name="test/skel/template/skel.template.i18ntest.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="71855233fbfd9b90ebff83a0d1795d0d" name="test/skel/template/skel.template.text.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="fe573de5fb598408e90ede8bf6bdd3ce" name="test/skel/template/skel.template.textarea.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="9d0203b16cbd81649839051a1927dd4d" name="tpl/info.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="1ba18cd82f3dfe2f5ed81f9214786ea6" name="tpl/unittest.tpl" role="php" />
+   <file baseinstalldir="Ethna" md5sum="f5025908d507e70fa3ef1a5a67427928" name="CHANGES" role="php" />
+   <file baseinstalldir="Ethna" md5sum="90e9ccee46452b94af0d3c06a6c46d7a" name="Ethna.php" role="php" />
+   <file baseinstalldir="Ethna" md5sum="5756bc9f250066ac2bad8b15e82c0984" name="LICENSE" role="php" />
+   <file baseinstalldir="Ethna" md5sum="7c47fb3d9c6750d0117ba795842b7699" name="README" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.3.5</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>DB</name>
+    <channel>pear.php.net</channel>
+   </package>
+   <package>
+    <name>Smarty</name>
+    <channel>pear.ethna.jp</channel>
+   </package>
+   <package>
+    <name>simpletest</name>
+    <channel>pear.ethna.jp</channel>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>windows</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <install as="ethna.bat" name="bin/ethna.bat" />
+   <ignore name="bin/ethna.sh" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <filelist>
+   <install as="ethna" name="bin/ethna.sh" />
+   <ignore name="bin/ethna.bat" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>2.5.0</release>
+    <api>2.5.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-10-18</date>
+   <license uri="http://www.opensource.org/licenses/bsd-license.php">The BSD License</license>
+   <notes>
+Ethna PHP Web Application Framework
+   </notes>
+  </release>
+ </changelog>
+</package>

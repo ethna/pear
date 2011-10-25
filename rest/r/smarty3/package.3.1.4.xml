@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Smarty3</name>
+ <channel>pear.ethna.jp</channel>
+ <summary>PHP Template Engine</summary>
+ <description>Smarty 3.1.4
+
+Author: Monte Ohrt &lt;monte at ohrt dot com &gt;
+Author: Uwe Tews
+
+AN INTRODUCTION TO SMARTY 3
+
+NOTICE FOR 3.1 release:
+
+Please see the SMARTY_3.1_NOTES.txt file that comes with the distribution.
+
+NOTICE for 3.0.5 release:
+
+Smarty now follows the PHP error_reporting level by default. If PHP does not mask E_NOTICE and you try to access an unset template variable, you will now get an E_NOTICE warning. To revert to the old behavior:
+
+$smarty-&gt;error_reporting = E_ALL &amp; ~E_NOTICE;
+
+NOTICE for 3.0 release:
+
+IMPORTANT: Some API adjustments have been made between the RC4 and 3.0 release.
+We felt it is better to make these now instead of after a 3.0 release, then have to
+immediately deprecate APIs in 3.1. Online documentation has been updated
+to reflect these changes. Specifically:
+
+---- API CHANGES RC4 -&gt; 3.0 ----
+
+$smarty-&gt;register-&gt;*
+$smarty-&gt;unregister-&gt;*
+$smarty-&gt;utility-&gt;*
+$samrty-&gt;cache-&gt;*
+
+Have all been changed to local method calls such as:
+
+$smarty-&gt;clearAllCache()
+$smarty-&gt;registerFoo()
+$smarty-&gt;unregisterFoo()
+$smarty-&gt;testInstall()
+etc.
+
+Registration of function, block, compiler, and modifier plugins have been
+consolidated under two API calls:
+
+$smarty-&gt;registerPlugin(...)
+$smarty-&gt;unregisterPlugin(...)
+
+Registration of pre, post, output and variable filters have been
+consolidated under two API calls:
+
+$smarty-&gt;registerFilter(...)
+$smarty-&gt;unregisterFilter(...)
+
+Please refer to the online documentation for all specific changes:
+
+http://www.smarty.net/documentation
+
+----
+
+The Smarty 3 API has been refactored to a syntax geared
+for consistency and modularity. The Smarty 2 API syntax is still supported, but
+will throw a deprecation notice. You can disable the notices, but it is highly
+recommended to adjust your syntax to Smarty 3, as the Smarty 2 syntax must run
+through an extra rerouting wrapper.
+
+Basically, all Smarty methods now follow the &quot;fooBarBaz&quot; camel case syntax. Also,
+all Smarty properties now have getters and setters. So for example, the property
+$smarty-&gt;cache_dir can be set with $smarty-&gt;setCacheDir(&apos;foo/&apos;) and can be
+retrieved with $smarty-&gt;getCacheDir().
+
+Some of the Smarty 3 APIs have been revoked such as the &quot;is*&quot; methods that were
+just duplicate functions of the now available &quot;get*&quot; methods.
+
+Here is a rundown of the Smarty 3 API:
+
+$smarty-&gt;fetch($template, $cache_id = null, $compile_id = null, $parent = null)
+$smarty-&gt;display($template, $cache_id = null, $compile_id = null, $parent = null)
+$smarty-&gt;isCached($template, $cache_id = null, $compile_id = null)
+$smarty-&gt;createData($parent = null)
+$smarty-&gt;createTemplate($template, $cache_id = null, $compile_id = null, $parent = null)
+$smarty-&gt;enableSecurity()
+$smarty-&gt;disableSecurity()
+$smarty-&gt;setTemplateDir($template_dir)
+$smarty-&gt;addTemplateDir($template_dir)
+$smarty-&gt;templateExists($resource_name)
+$smarty-&gt;loadPlugin($plugin_name, $check = true)
+$smarty-&gt;loadFilter($type, $name)
+$smarty-&gt;setExceptionHandler($handler)
+$smarty-&gt;addPluginsDir($plugins_dir)
+$smarty-&gt;getGlobal($varname = null)
+$smarty-&gt;getRegisteredObject($name)
+$smarty-&gt;getDebugTemplate()
+$smarty-&gt;setDebugTemplate($tpl_name)
+$smarty-&gt;assign($tpl_var, $value = null, $nocache = false)
+$smarty-&gt;assignGlobal($varname, $value = null, $nocache = false)
+$smarty-&gt;assignByRef($tpl_var, &amp;$value, $nocache = false)
+$smarty-&gt;append($tpl_var, $value = null, $merge = false, $nocache = false)
+$smarty-&gt;appendByRef($tpl_var, &amp;$value, $merge = false)
+$smarty-&gt;clearAssign($tpl_var)
+$smarty-&gt;clearAllAssign()
+$smarty-&gt;configLoad($config_file, $sections = null)
+$smarty-&gt;getVariable($variable, $_ptr = null, $search_parents = true, $error_enable = true)
+$smarty-&gt;getConfigVariable($variable)
+$smarty-&gt;getStreamVariable($variable)
+$smarty-&gt;getConfigVars($varname = null)
+$smarty-&gt;clearConfig($varname = null)
+$smarty-&gt;getTemplateVars($varname = null, $_ptr = null, $search_parents = true)
+$smarty-&gt;clearAllCache($exp_time = null, $type = null)
+$smarty-&gt;clearCache($template_name, $cache_id = null, $compile_id = null, $exp_time = null, $type = null)
+
+$smarty-&gt;registerPlugin($type, $tag, $callback, $cacheable = true, $cache_attr = array())
+
+$smarty-&gt;registerObject($object_name, $object_impl, $allowed = array(), $smarty_args = true, $block_methods = array())
+
+$smarty-&gt;registerFilter($type, $function_name)
+$smarty-&gt;registerResource($resource_type, $function_names)
+$smarty-&gt;registerDefaultPluginHandler($function_name)
+$smarty-&gt;registerDefaultTemplateHandler($function_name)
+
+$smarty-&gt;unregisterPlugin($type, $tag)
+$smarty-&gt;unregisterObject($object_name)
+$smarty-&gt;unregisterFilter($type, $function_name)
+$smarty-&gt;unregisterResource($resource_type)
+
+$smarty-&gt;compileAllTemplates($extention = &apos;.tpl&apos;, $force_compile = false, $time_limit = 0, $max_errors = null)
+$smarty-&gt;clearCompiledTemplate($resource_name = null, $compile_id = null, $exp_time = null)
+$smarty-&gt;testInstall()
+
+// then all the getters/setters, available for all properties. Here are a few:
+
+$caching = $smarty-&gt;getCaching();      // get $smarty-&gt;caching
+$smarty-&gt;setCaching(true);             // set $smarty-&gt;caching
+$smarty-&gt;setDeprecationNotices(false); // set $smarty-&gt;deprecation_notices
+$smarty-&gt;setCacheId($id);              // set $smarty-&gt;cache_id
+$debugging = $smarty-&gt;getDebugging();  // get $smarty-&gt;debugging
+
+
+FILE STRUCTURE
+
+The Smarty 3 file structure is similar to Smarty 2:
+
+/libs/
+  Smarty.class.php
+/libs/sysplugins/
+  internal.*
+/libs/plugins/
+  function.mailto.php
+  modifier.escape.php
+  ...
+
+A lot of Smarty 3 core functionality lies in the sysplugins directory; you do
+not need to change any files here. The /libs/plugins/ folder is where Smarty
+plugins are located. You can add your own here, or create a separate plugin
+directory, just the same as Smarty 2. You will still need to create your own
+/cache/, /templates/, /templates_c/, /configs/ folders. Be sure /cache/ and
+/templates_c/ are writable.
+
+The typical way to use Smarty 3 should also look familiar:
+
+require(&apos;Smarty.class.php&apos;);
+$smarty = new Smarty;
+$smarty-&gt;assign(&apos;foo&apos;,&apos;bar&apos;);
+$smarty-&gt;display(&apos;index.tpl&apos;);
+
+
+However, Smarty 3 works completely different on the inside. Smarty 3 is mostly
+backward compatible with Smarty 2, except for the following items:
+
+*) Smarty 3 is PHP 5 only. It will not work with PHP 4.
+*) The {php} tag is disabled by default. Enable with $smarty-&gt;allow_php_tag=true.
+*) Delimiters surrounded by whitespace are no longer treated as Smarty tags.
+   Therefore, { foo } will not compile as a tag, you must use {foo}. This change
+   Makes Javascript/CSS easier to work with, eliminating the need for {literal}.
+   This can be disabled by setting $smarty-&gt;auto_literal = false;
+*) The Smarty 3 API is a bit different. Many Smarty 2 API calls are deprecated
+   but still work. You will want to update your calls to Smarty 3 for maximum
+   efficiency.
+
+
+There are many things that are new to Smarty 3. Here are the notable items:
+   
+LEXER/PARSER
+============
+
+Smarty 3 now uses a lexing tokenizer for its parser/compiler. Basically, this
+means Smarty has some syntax additions that make life easier such as in-template
+math, shorter/intuitive function parameter options, infinite function recursion,
+more accurate error handling, etc.
+
+
+WHAT IS NEW IN SMARTY TEMPLATE SYNTAX
+=====================================
+
+Smarty 3 allows expressions almost anywhere. Expressions can include PHP
+functions as long as they are not disabled by the security policy, object
+methods and properties, etc. The {math} plugin is no longer necessary but
+is still supported for BC.
+
+Examples:
+{$x+$y}                           will output the sum of x and y.
+{$foo = strlen($bar)}             function in assignment
+{assign var=foo value= $x+$y}     in attributes 
+{$foo = myfunct( ($x+$y)*3 )}     as function parameter 
+{$foo[$x+3]}                      as array index
+
+Smarty tags can be used as values within other tags.
+Example:  {$foo={counter}+3}
+
+Smarty tags can also be used inside double quoted strings.
+Example:  {$foo=&quot;this is message {counter}&quot;}
+
+You can define arrays within templates.
+Examples:
+{assign var=foo value=[1,2,3]}
+{assign var=foo value=[&apos;y&apos;=&gt;&apos;yellow&apos;,&apos;b&apos;=&gt;&apos;blue&apos;]}
+Arrays can be nested.
+{assign var=foo value=[1,[9,8],3]}
+
+There is a new short syntax supported for assigning variables.
+Example: {$foo=$bar+2}
+
+You can assign a value to a specific array element. If the variable exists but
+is not an array, it is converted to an array before the new values are assigned.
+Examples:
+{$foo[&apos;bar&apos;]=1}
+{$foo[&apos;bar&apos;][&apos;blar&apos;]=1}
+
+You can append values to an array. If the variable exists but is not an array,
+it is converted to an array before the new values are assigned.
+Example: {$foo[]=1}
+
+You can use a PHP-like syntax for accessing array elements, as well as the
+original &quot;dot&quot; notation.
+Examples:
+{$foo[1]}             normal access
+{$foo[&apos;bar&apos;]}
+{$foo[&apos;bar&apos;][1]}
+{$foo[$x+$x]}         index may contain any expression
+{$foo[$bar[1]]}       nested index
+{$foo[section_name]}  smarty section access, not array access!
+
+The original &quot;dot&quot; notation stays, and with improvements.
+Examples:
+{$foo.a.b.c}        =&gt;  $foo[&apos;a&apos;][&apos;b&apos;][&apos;c&apos;] 
+{$foo.a.$b.c}       =&gt;  $foo[&apos;a&apos;][$b][&apos;c&apos;]        with variable index
+{$foo.a.{$b+4}.c}   =&gt;  $foo[&apos;a&apos;][$b+4][&apos;c&apos;]       with expression as index
+{$foo.a.{$b.c}}     =&gt;  $foo[&apos;a&apos;][$b[&apos;c&apos;]]         with nested index
+
+note that { and } are used to address ambiguties when nesting the dot syntax. 
+
+Variable names themselves can be variable and contain expressions.
+Examples:
+$foo         normal variable
+$foo_{$bar}  variable name containing other variable 
+$foo_{$x+$y} variable name containing expressions 
+$foo_{$bar}_buh_{$blar}  variable name with multiple segments
+{$foo_{$x}}  will output the variable $foo_1 if $x has a value of 1.
+
+Object method chaining is implemented.
+Example: {$object-&gt;method1($x)-&gt;method2($y)}
+
+{for} tag added for looping (replacement for {section} tag):
+{for $x=0, $y=count($foo); $x&lt;$y; $x++}  ....  {/for}
+Any number of statements can be used separated by comma as the first
+inital expression at {for}.
+
+{for $x = $start to $end step $step} ... {/for}is in the SVN now .
+You can use also
+{for $x = $start to $end} ... {/for}
+In this case the step value will be automaticall 1 or -1 depending on the start and end values.
+Instead of $start and $end you can use any valid expression.
+Inside the loop the following special vars can be accessed:
+$x@iteration = number of iteration
+$x@total = total number of iterations
+$x@first = true on first iteration
+$x@last = true on last iteration
+
+
+The Smarty 2 {section} syntax is still supported.
+
+New shorter {foreach} syntax to loop over an array.
+Example: {foreach $myarray as $var}...{/foreach}
+
+Within the foreach loop, properties are access via:
+
+$var@key            foreach $var array key
+$var@iteration      foreach current iteration count (1,2,3...)
+$var@index          foreach current index count (0,1,2...)
+$var@total          foreach $var array total
+$var@first          true on first iteration
+$var@last           true on last iteration
+
+The Smarty 2 {foreach} tag syntax is still supported.
+
+NOTE: {$bar[foo]} still indicates a variable inside of a {section} named foo. 
+If you want to access an array element with index foo, you must use quotes
+such as {$bar[&apos;foo&apos;]}, or use the dot syntax {$bar.foo}.
+
+while block tag is now implemented:
+{while $foo}...{/while}
+{while $x lt 10}...{/while}
+
+Direct access to PHP functions:
+Just as you can use PHP functions as modifiers directly, you can now access
+PHP functions directly, provided they are permitted by security settings:
+{time()}
+
+There is a new {function}...{/function} block tag to implement a template function.
+This enables reuse of code sequences like a plugin function. It can call itself recursively.
+Template function must be called with the new {call name=foo...} tag.
+
+Example:
+
+Template file:
+{function name=menu level=0}
+  &lt;ul class=&quot;level{$level}&quot;&gt;
+  {foreach $data as $entry}
+    {if is_array($entry)}
+      &lt;li&gt;{$entry@key}&lt;/li&gt;
+       {call name=menu data=$entry level=$level+1}
+    {else}
+      &lt;li&gt;{$entry}&lt;/li&gt;
+    {/if}
+  {/foreach}
+  &lt;/ul&gt;
+{/function}
+
+{$menu = [&apos;item1&apos;,&apos;item2&apos;,&apos;item3&apos; =&gt; [&apos;item3-1&apos;,&apos;item3-2&apos;,&apos;item3-3&apos; =&gt;
+  [&apos;item3-3-1&apos;,&apos;item3-3-2&apos;]],&apos;item4&apos;]}
+
+{call name=menu data=$menu}
+
+
+Generated output:
+    * item1
+    * item2
+    * item3
+          o item3-1
+          o item3-2
+          o item3-3
+                + item3-3-1
+                + item3-3-2
+    * item4
+
+The function tag itself must have the &quot;name&quot; attribute. This name is the tag
+name when calling the function. The function tag may have any number of
+additional attributes. These will be default settings for local variables.
+
+New {nocache} block function:
+{nocache}...{/nocache} will declare a section of the template to be non-cached
+when template caching is enabled.
+
+New nocache attribute:
+You can declare variable/function output as non-cached with the nocache attribute.
+Examples:
+
+{$foo nocache=true}
+{$foo nocache} /* same */
+
+{foo bar=&quot;baz&quot; nocache=true}
+{foo bar=&quot;baz&quot; nocache} /* same */
+
+{time() nocache=true}
+{time() nocache} /* same */
+
+Or you can also assign the variable in your script as nocache:
+$smarty-&gt;assign(&apos;foo&apos;,$something,true); // third param is nocache setting
+{$foo} /* non-cached */
+
+$smarty.current_dir returns the directory name of the current template.
+
+You can use strings directly as templates with the &quot;string&quot; resource type.
+Examples:
+$smarty-&gt;display(&apos;string:This is my template, {$foo}!&apos;); // php
+{include file=&quot;string:This is my template, {$foo}!&quot;} // template
+
+
+
+VARIABLE SCOPE / VARIABLE STORAGE
+=================================
+
+In Smarty 2, all assigned variables were stored within the Smarty object. 
+Therefore, all variables assigned in PHP were accessible by all subsequent 
+fetch and display template calls.
+
+In Smarty 3, we have the choice to assign variables to the main Smarty object, 
+to user-created data objects, and to user-created template objects. 
+These objects can be chained. The object at the end of a chain can access all
+variables belonging to that template and all variables within the parent objects.
+The Smarty object can only be the root of a chain, but a chain can be isolated
+from the Smarty object.
+
+All known Smarty assignment interfaces will work on the data and template objects.
+
+Besides the above mentioned objects, there is also a special storage area for
+global variables.
+
+A Smarty data object can be created as follows:
+$data = $smarty-&gt;createData();    // create root data object
+$data-&gt;assign(&apos;foo&apos;,&apos;bar&apos;);       // assign variables as usual
+$data-&gt;config_load(&apos;my.conf&apos;);									 // load config file    
+
+$data= $smarty-&gt;createData($smarty);  // create data object having a parent link to
+the Smarty object
+
+$data2= $smarty-&gt;createData($data);   // create data object having a parent link to
+the $data data object
+
+A template object can be created by using the createTemplate method. It has the
+same parameter assignments as the fetch() or display() method.
+Function definition:
+function createTemplate($template, $cache_id = null, $compile_id = null, $parent = null)
+
+The first parameter can be a template name, a smarty object or a data object.
+
+Examples:
+$tpl = $smarty-&gt;createTemplate(&apos;mytpl.tpl&apos;); // create template object not linked to any parent
+$tpl-&gt;assign(&apos;foo&apos;,&apos;bar&apos;);                   // directly assign variables
+$tpl-&gt;config_load(&apos;my.conf&apos;);									 // load config file    
+
+$tpl = $smarty-&gt;createTemplate(&apos;mytpl.tpl&apos;,$smarty);  // create template having a parent link to the Smarty object
+$tpl = $smarty-&gt;createTemplate(&apos;mytpl.tpl&apos;,$data);    // create template having a parent link to the $data object
+
+The standard fetch() and display() methods will implicitly create a template object.
+If the $parent parameter is not specified in these method calls, the template object
+is will link back to the Smarty object as it&apos;s parent.
+
+If a template is called by an {include...} tag from another template, the
+subtemplate links back to the calling template as it&apos;s parent. 
+
+All variables assigned locally or from a parent template are accessible. If the
+template creates or modifies a variable by using the {assign var=foo...} or
+{$foo=...} tags, these new values are only known locally (local scope). When the
+template exits, none of the new variables or modifications can be seen in the
+parent template(s). This is same behavior as in Smarty 2. 
+
+With Smarty 3, we can assign variables with a scope attribute which allows the
+availablility of these new variables or modifications globally (ie in the parent
+templates.)
+
+Possible scopes are local, parent, root and global. 
+Examples:
+{assign var=foo value=&apos;bar&apos;}       // no scope is specified, the default &apos;local&apos;
+{$foo=&apos;bar&apos;}                       // same, local scope
+{assign var=foo value=&apos;bar&apos; scope=&apos;local&apos;} // same, local scope
+
+{assign var=foo value=&apos;bar&apos; scope=&apos;parent&apos;} // Values will be available to the parent object 
+{$foo=&apos;bar&apos; scope=&apos;parent&apos;}                 // (normally the calling template)
+
+{assign var=foo value=&apos;bar&apos; scope=&apos;root&apos;}   // Values will be exported up to the root object, so they can 
+{$foo=&apos;bar&apos; scope=&apos;root&apos;}                   // be seen from all templates using the same root.
+
+{assign var=foo value=&apos;bar&apos; scope=&apos;global&apos;} // Values will be exported to global variable storage, 
+{$foo=&apos;bar&apos; scope=&apos;global&apos;}                 // they are available to any and all templates.
+
+
+The scope attribute can also be attached to the {include...} tag. In this case,
+the specified scope will be the default scope for all assignments within the
+included template.
+
+
+PLUGINS
+=======
+
+Smarty3 are following the same coding rules as in Smarty2. 
+The only difference is that the template object is passed as additional third parameter.
+
+smarty_plugintype_name (array $params, object $smarty, object $template)
+
+The Smarty 2 plugins are still compatible as long as they do not make use of specific Smarty2 internals.
+
+
+TEMPLATE INHERITANCE:
+=====================
+
+With template inheritance you can define blocks, which are areas that can be
+overriden by child templates, so your templates could look like this: 
+
+parent.tpl:
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;{block name=&apos;title&apos;}My site name{/block}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;{block name=&apos;page-title&apos;}Default page title{/block}&lt;/h1&gt;
+    &lt;div id=&quot;content&quot;&gt;
+      {block name=&apos;content&apos;}
+        Default content
+      {/block}
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+child.tpl:
+{extends file=&apos;parent.tpl&apos;} 
+{block name=&apos;title&apos;}
+Child title
+{/block}
+
+grandchild.tpl:
+{extends file=&apos;child.tpl&apos;} 
+{block name=&apos;title&apos;}Home - {$smarty.block.parent}{/block} 
+{block name=&apos;page-title&apos;}My home{/block}
+{block name=&apos;content&apos;}
+  {foreach $images as $img}
+    &lt;img src=&quot;{$img.url}&quot; alt=&quot;{$img.description}&quot; /&gt;
+  {/foreach}
+{/block}
+
+We redefined all the blocks here, however in the title block we used {$smarty.block.parent},
+which tells Smarty to insert the default content from the parent template in its place.
+The content block was overriden to display the image files, and page-title has also be 
+overriden to display a completely different title. 
+
+If we render grandchild.tpl we will get this: 
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Home - Child title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My home&lt;/h1&gt;
+    &lt;div id=&quot;content&quot;&gt;
+      &lt;img src=&quot;/example.jpg&quot; alt=&quot;image&quot; /&gt;
+      &lt;img src=&quot;/example2.jpg&quot; alt=&quot;image&quot; /&gt;
+      &lt;img src=&quot;/example3.jpg&quot; alt=&quot;image&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+NOTE: In the child templates everything outside the {extends} or {block} tag sections
+is ignored.
+
+The inheritance tree can be as big as you want (meaning you can extend a file that 
+extends another one that extends another one and so on..), but be aware that all files 
+have to be checked for modifications at runtime so the more inheritance the more overhead you add.
+
+Instead of defining the parent/child relationships with the {extends} tag in the child template you
+can use the resource as follow:
+
+$smarty-&gt;display(&apos;extends:parent.tpl|child.tpl|grandchild.tpl&apos;);
+
+Child {block} tags may optionally have a append or prepend attribute. In this case the parent block content 
+is appended or prepended to the child block content.
+
+{block name=&apos;title&apos; append} My title {/block}
+
+
+PHP STREAMS:
+============
+
+(see online documentation)
+
+VARIBLE FILTERS:
+================
+
+(see online documentation)
+
+
+STATIC CLASS ACCESS AND NAMESPACE SUPPORT
+=========================================
+
+You can register a class with optional namespace for the use in the template like:
+
+$smarty-&gt;register-&gt;templateClass(&apos;foo&apos;,&apos;name\name2\myclass&apos;);
+
+In the template you can use it like this:
+{foo::method()}  etc.
+
+
+=======================
+
+Please look through it and send any questions/suggestions/etc to the forums.
+
+http://www.phpinsider.com/smarty-forum/viewtopic.php?t=14168
+
+Monte and Uwe</description>
+ <lead>
+  <name>Monte Ohrt</name>
+  <user>monte</user>
+  <email>monte@ohrt.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Andrei Zmievski</name>
+  <user>andrei</user>
+  <email>andrei@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-10-25</date>
+ <time>01:30:13</time>
+ <version>
+  <release>3.1.4</release>
+  <api>3.1.4</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+PEAR Style Package
+ </notes>
+ <contents>
+  <dir baseinstalldir="/Smarty3" name="/">
+   <file baseinstalldir="/Smarty3" md5sum="f19daacb697253ae5c1231c8deded9c9" name="plugins/block.textformat.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="95d9f4a7de57872c3946463948cb01f6" name="plugins/function.counter.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bf71dfcaf7676619cc0526f327022035" name="plugins/function.cycle.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bfe9bc7d823a8949e415ab662641402c" name="plugins/function.fetch.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1f561e7845ffda526dbfc4eae6567ab2" name="plugins/function.html_checkboxes.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e039c37764623d888a48d11408b47703" name="plugins/function.html_image.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="76b52be3d321e6089bb6a3b19401b02c" name="plugins/function.html_options.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2a7d59cf2a82cb5175df20d9ef76d435" name="plugins/function.html_radios.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1bfb270a0719176db5af0f9091efde6c" name="plugins/function.html_select_date.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f64cf2ff29591b74321ccd05c57ea23d" name="plugins/function.html_select_time.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="172491d13ad37f0b82de821758b21dd2" name="plugins/function.html_table.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b200498cb9f5f77e0fdeb31b41baeabe" name="plugins/function.mailto.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0b891f2679f8b1d275e2e3f53489fde5" name="plugins/function.math.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e814b7a9fada4412daa6b7282cc432a1" name="plugins/modifier.capitalize.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ab5c79928eb69dedbf1199c49735b89a" name="plugins/modifier.date_format.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="dccce67f92f7c55042870f5b221e694b" name="plugins/modifier.debug_print_var.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3ebac9c60c49d9f25a6321f4dd585e30" name="plugins/modifier.escape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="21bb39afa1b7fd6de675e554b5e43143" name="plugins/modifier.regex_replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="7cb4b0d4c83c9fdcd811eac395cf99c2" name="plugins/modifier.replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0f2e8b0fecc1e0c7256f595bc45358e8" name="plugins/modifier.spacify.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="759d2a25cafa3920e6d508ec89478d35" name="plugins/modifier.truncate.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ea240a56cdf2a6ba96e77dd3b11c9d2a" name="plugins/modifiercompiler.cat.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b8e2531bc1bf251e11b04593bc010552" name="plugins/modifiercompiler.count_characters.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd26736080dcabee8f1a7aabf21d0b00" name="plugins/modifiercompiler.count_paragraphs.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="cca88c8997f97b90511789cab0ad1187" name="plugins/modifiercompiler.count_sentences.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="73ad591e21c5d68e91a76b05b688ecee" name="plugins/modifiercompiler.count_words.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d72bbffe79f92d04af143c36ede00d8d" name="plugins/modifiercompiler.default.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bc49734be89dcc9df0959129e266e45f" name="plugins/modifiercompiler.escape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="219f5f10346c35008f913b68636f25af" name="plugins/modifiercompiler.from_charset.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f329df84ba10c052f4f50022facd6f9d" name="plugins/modifiercompiler.indent.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b9e5824ffdda8a60f18a4605f76a0165" name="plugins/modifiercompiler.lower.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="33451b823afdfe8271c402cdabf61d57" name="plugins/modifiercompiler.noprint.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f610c9fb402d248c025369295b276bcb" name="plugins/modifiercompiler.string_format.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="fdb2bb7b5a686b9bd20763cbcea020cb" name="plugins/modifiercompiler.strip.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bdf3af4b31f661477f7f168bcf16bc45" name="plugins/modifiercompiler.strip_tags.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="4583e2fd497f72f7dffc43fe37ab755c" name="plugins/modifiercompiler.to_charset.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b5061fadc6f5317c52e1d950098dadfe" name="plugins/modifiercompiler.unescape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8811bb381502646ccc57ae0ea66f14a6" name="plugins/modifiercompiler.upper.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="4866fe77b21a94368ce95f5ad22f3a83" name="plugins/modifiercompiler.wordwrap.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="09b723e9c389a31f345bf6acfd303ae1" name="plugins/outputfilter.trimwhitespace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="87248603876b9aa801b45914a7760aa1" name="plugins/shared.escape_special_chars.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="5591b0adedfe0fb31574052abaca5126" name="plugins/shared.literal_compiler_param.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c340857831b985f96412639486ca6bf1" name="plugins/shared.make_timestamp.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="00ad04ec798345c9da214d4eae1c8ba5" name="plugins/shared.mb_str_replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1b0c2246517f822d1c6ed61e4dde1800" name="plugins/shared.mb_unicode.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="243e1f2e5e4512df21a6b9f0479844bc" name="plugins/shared.mb_wordwrap.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2777772e832019759f427b5da582fd40" name="plugins/variablefilter.htmlspecialchars.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="63d79c30db1b8f964cbef0cdaa9cac6a" name="sysplugins/smarty_cacheresource.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6f3e31434270c9e27aea030ee09d1b38" name="sysplugins/smarty_cacheresource_custom.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="603728dbe347871d1c155321927b2ba1" name="sysplugins/smarty_cacheresource_keyvaluestore.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ffaba159a9b9295d625463529cb97e4b" name="sysplugins/smarty_config_source.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d64ef13bde8a7e6dcc9b6fec65d8555c" name="sysplugins/smarty_internal_cacheresource_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3d702028ec4c6da241089a03bff21f35" name="sysplugins/smarty_internal_compilebase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="fd71acfc5c29f7e2d006f993da663282" name="sysplugins/smarty_internal_compile_append.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="9eb25a7ebf07f68434c2578f641295d7" name="sysplugins/smarty_internal_compile_assign.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="23d33f42b21608e57a3a4ece5c0e3b79" name="sysplugins/smarty_internal_compile_block.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="4670ea85f8d6c28abacc1b643591008d" name="sysplugins/smarty_internal_compile_break.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a8cadf2371b55a19df886564f6fd38b5" name="sysplugins/smarty_internal_compile_call.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bbb449ef4e87fd2087b9d0d9d23553cf" name="sysplugins/smarty_internal_compile_capture.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1e825ed2e87e3a3b13fde0a6ebb5bf25" name="sysplugins/smarty_internal_compile_config_load.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6e4051e804122cce52c9f1fa85acabc5" name="sysplugins/smarty_internal_compile_continue.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="9d9de7480cc8b1db09b499746a03f626" name="sysplugins/smarty_internal_compile_debug.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd94ce97541001366b480793896def3e" name="sysplugins/smarty_internal_compile_eval.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ac7187d1699889ec8c547e0fd49b693f" name="sysplugins/smarty_internal_compile_extends.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e3d5ae048127268304e498e2f8a5915a" name="sysplugins/smarty_internal_compile_for.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="559a83858780818d67930de06f2121bb" name="sysplugins/smarty_internal_compile_foreach.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a084a3a078a64aa93cb6ec395fb42123" name="sysplugins/smarty_internal_compile_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0a29590b6b82edb0b1a98a94b3548289" name="sysplugins/smarty_internal_compile_if.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f6b013af09796bce945657d4e49c7374" name="sysplugins/smarty_internal_compile_include.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="50a88eb174e0427f6edfbd904e5af08c" name="sysplugins/smarty_internal_compile_include_php.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b4daff7b0c97e643ab15e4a15f20b274" name="sysplugins/smarty_internal_compile_insert.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b60cb0ce76c23b2f7e3a2cf5dd4c3137" name="sysplugins/smarty_internal_compile_ldelim.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="69a46fc75b04eb964be159aa7e54647f" name="sysplugins/smarty_internal_compile_nocache.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="79014775c7cc64452e44a1ef14121626" name="sysplugins/smarty_internal_compile_private_block_plugin.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ebacfa8d7fe15f32a44e0a8ab71bea63" name="sysplugins/smarty_internal_compile_private_function_plugin.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ce4d8bee71f87b298a2187229c46e8c3" name="sysplugins/smarty_internal_compile_private_modifier.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="54bb13f2e9587fa2ac24a3c04ba48bd6" name="sysplugins/smarty_internal_compile_private_object_block_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8fd66a8f2ae3d20b03f10f66e36a3995" name="sysplugins/smarty_internal_compile_private_object_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c13474914e4af30e9c3b0888ce2dceb0" name="sysplugins/smarty_internal_compile_private_print_expression.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="79fdd5de62ab820c10ab14a9437f69bf" name="sysplugins/smarty_internal_compile_private_registered_block.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e1b54ebd4683180c6d0846e9cfaf7e29" name="sysplugins/smarty_internal_compile_private_registered_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="06bf328ef54e45a698067f1c0e005f1e" name="sysplugins/smarty_internal_compile_private_special_variable.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e0ad02a506e0b44f956c14d291e329c3" name="sysplugins/smarty_internal_compile_rdelim.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f52e128ee2f15a355b3207287763c00c" name="sysplugins/smarty_internal_compile_section.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="7187949d5e69602674612566b801050e" name="sysplugins/smarty_internal_compile_setfilter.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="db77b0e4f34669f35a424aad6de90517" name="sysplugins/smarty_internal_compile_while.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2b1d37c3a622f6d70d07513907e6a442" name="sysplugins/smarty_internal_config.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a35ce1e17dcb48bc5186389953a4824b" name="sysplugins/smarty_internal_configfilelexer.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="96c856472d19cd2b90c3208964e6db51" name="sysplugins/smarty_internal_configfileparser.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ed648487b57c657089be98eac7ea94a1" name="sysplugins/smarty_internal_config_file_compiler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0be378cac66bae8bc28e3eb305f369de" name="sysplugins/smarty_internal_data.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="95fb21bdb36386c711c7ce2024841a71" name="sysplugins/smarty_internal_debug.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0f826812544232e25132593a203ef59d" name="sysplugins/smarty_internal_filter_handler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="be4688320aa6705245e2f574de475c9f" name="sysplugins/smarty_internal_function_call_handler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2241e4cf0bc823c770bf7d3b9f67e42e" name="sysplugins/smarty_internal_get_include_path.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="33c667d2a777d2bfa49c11b05a46d1b8" name="sysplugins/smarty_internal_nocache_insert.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd56249369096911858e70d0ed7ce6bd" name="sysplugins/smarty_internal_parsetree.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="67aa045f646794349a17c4ec4dfa2f0d" name="sysplugins/smarty_internal_resource_eval.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="583826eb9e6a222a0abad5eee1c31f9e" name="sysplugins/smarty_internal_resource_extends.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e19b25703f5209ad1c094fa21d0b71e4" name="sysplugins/smarty_internal_resource_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d719177ec017f38ebd07b58464e12de4" name="sysplugins/smarty_internal_resource_php.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6b83b9b10540c23132a0b064cdb0d5df" name="sysplugins/smarty_internal_resource_registered.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6baa79d3fa9b71f4fba50797d13a01b1" name="sysplugins/smarty_internal_resource_stream.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d262867cccb0087b77b550a76f481007" name="sysplugins/smarty_internal_resource_string.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3e206c623d5539cf62166424387f470b" name="sysplugins/smarty_internal_smartytemplatecompiler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b098140fae219862a360813460995136" name="sysplugins/smarty_internal_template.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2b77b9ad4c16d1ad6aa83221d16f27ff" name="sysplugins/smarty_internal_templatebase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0d8fbf66cdbe6ea915731eb2db439313" name="sysplugins/smarty_internal_templatecompilerbase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e4c15ba8b34addbeb41bfc5794c115f8" name="sysplugins/smarty_internal_templatelexer.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ab833b20a00e0c3d6dcc4fcf553a8219" name="sysplugins/smarty_internal_templateparser.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2dc85de1b1d0d8b159a6e898acdc805a" name="sysplugins/smarty_internal_utility.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="612cc6639074102a3171d0e08e99a20f" name="sysplugins/smarty_internal_write_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="74f6f9008b7f4fc6f1190a1d1a015257" name="sysplugins/smarty_resource.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="831726e7553a1b53bb2fc3288e38342a" name="sysplugins/smarty_resource_custom.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8ad5de73dbe35d0b8d304bde138e015c" name="sysplugins/smarty_resource_recompiled.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="811297e519643b4342f78aa19b681555" name="sysplugins/smarty_resource_uncompiled.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="512761b1cd41524bbd8d322826d1c6a3" name="sysplugins/smarty_security.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="98a94f077d2453138d657cf226051e95" name="debug.tpl" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="06cd3a0f13c302904c2e47bba481805f" name="Smarty.class.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="5734f7d205e8217c6c53c96fea2a8be3" name="SmartyBC.class.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.9.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>3.1.4</release>
+    <api>3.1.4</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-10-25</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+PEAR Style Package
+   </notes>
+  </release>
+ </changelog>
+</package>

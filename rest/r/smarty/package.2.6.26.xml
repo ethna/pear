@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Smarty</name>
+ <channel>pear.ethna.jp</channel>
+ <summary>PHP Template Engine</summary>
+ <description>NAME:
+
+    Smarty - the PHP compiling template engine
+
+VERSION: 2.6.26
+
+AUTHORS:
+    
+    Monte Ohrt &lt;monte at ohrt dot com&gt;
+    Andrei Zmievski &lt;andrei@php.net&gt;
+
+MAILING LISTS:
+
+    We have a few mailing lists. &quot;discussion&quot; for you to share your ideas or ask
+	questions, &quot;developers&quot; for those interested in the development efforts of Smarty,
+	and &quot;svn&quot; for those that would like to track the updates made in the svn
+	repository.
+
+    send a blank e-mail message to:
+      smarty-discussion-subscribe@googlecode.com(subscribe to the general discussion list)
+      smarty-discussion-unsubscribe@googlecode.com (unsubscribe from the general discussion list)
+      smarty-discussion-digest-subscribe@googlecode.com (subscribe to digest)
+      smarty-discussion-digest-unsubscribe@googlecode.com (unsubscribe from digest)
+      smarty-developers-subscribe@googlecode.com (subscribe to the dev list)
+      smarty-developers-unsubscribe@googlecode.com (unsubscribe from the dev list)
+      smarty-svn-subscribe@googlecode.com (subscribe to the svn list)
+      smarty-svn-unsubscribe@googlecode.com (unsubscribe from the svn list)
+
+    You can also browse the mailing list archives at
+    http://groups.google.com/group/smarty-discussion
+    http://groups.google.com/group/smarty-developers
+
+    and the OLD list archives at
+    http://marc.theaimsgroup.com/?l=smarty&amp;r=1&amp;w=2
+
+SYNOPSIS:
+
+    require(&quot;Smarty.class.php&quot;);
+
+    $smarty = new Smarty;
+
+    $smarty-&gt;assign(&quot;Title&quot;,&quot;My Homepage&quot;);
+    $smarty-&gt;assign(&quot;Names&quot;,array(&quot;John&quot;,&quot;Gary&quot;,&quot;Gregg&quot;,&quot;James&quot;));
+
+    $smarty-&gt;display(&quot;index.tpl&quot;);
+
+
+DESCRIPTION:
+
+    What is Smarty?
+
+    Smarty is a template engine for PHP. Many other template engines for PHP
+    provide basic variable substitution and dynamic block functionality.
+    Smarty takes a step further to be a &quot;smart&quot; template engine, adding
+    features such as configuration files, template functions, and variable
+    modifiers, and making all of this functionality as easy as possible to
+    use for both programmers and template designers. Smarty also converts
+    the templates into PHP scripts, eliminating the need to parse the
+    templates on every invocation. This makes Smarty extremely scalable and
+    manageable for large application needs.
+
+    Some of Smarty&apos;s features:
+
+    * it is extremely fast
+    * no template parsing overhead, only compiles once.
+	* it is smart about recompiling only the template files that have
+	  changed.
+    * the template language is remarkably extensible via the plugin
+      architecture.
+    * configurable template delimiter tag syntax, so you can use
+      {}, {{}}, &lt;!--{}--&gt;, or whatever you like.
+    * built-in caching of template output.
+    * arbitrary template sources (filesystem, databases, etc.)
+    * template if/elseif/else/endif constructs are passed to the PHP parser,
+      so the if syntax can be as simple or as complex as you like.
+    * unlimited nesting of sections, conditionals, etc. allowed
+    * it is possible to embed PHP code right in your template files,
+      although not recommended and doubtfully needed since the engine
+      is so customizable.
+    * and many more.
+
+COPYRIGHT:
+    Copyright (c) 2001-2005 New Digital Group, Inc. All rights reserved.
+    This software is released under the GNU Lesser General Public License.
+    Please read the disclaimer at the top of the Smarty.class.php file.</description>
+ <lead>
+  <name>Monte Ohrt</name>
+  <user>monte</user>
+  <email>monte@ohrt.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Andrei Zmievski</name>
+  <user>andrei</user>
+  <email>andrei@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-10-25</date>
+ <time>01:30:08</time>
+ <version>
+  <release>2.6.26</release>
+  <api>2.6.26</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+PEAR Style Package
+ </notes>
+ <contents>
+  <dir baseinstalldir="/Smarty" name="/">
+   <file baseinstalldir="/Smarty" md5sum="c98832bd718c94629c732b5d4c2980cb" name="internals/core.assemble_plugin_filepath.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="4c2dd142c1c59e101b2f60cfc7a7cdc2" name="internals/core.assign_smarty_interface.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="a12f6e4653dc814369202e0ed57206b0" name="internals/core.create_dir_structure.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="297b9baf349e7f32e8e815612e823e3c" name="internals/core.display_debug_console.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ba78ea6d4112d4325b00e4b8101497c6" name="internals/core.get_include_path.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="72eb40e8367f77f0bd251e15a5bd4f5f" name="internals/core.get_microtime.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="e0fccd538d6f0ed8915d39cc2f9dd860" name="internals/core.get_php_resource.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="7ea83dd65e64bc0bc893d44096ec61e0" name="internals/core.is_secure.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="83e22de7a251fef6a033769b35989bf6" name="internals/core.is_trusted.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="d60028c542ec06749cd2d381bc07d0c2" name="internals/core.load_plugins.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="08d531fb688eed7253b316b11436e512" name="internals/core.load_resource_plugin.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="2a846ebfec89211b7090149052374059" name="internals/core.process_cached_inserts.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="95e1308976578925f2e57b1aa8d716bf" name="internals/core.process_compiled_include.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="e7de28f374768f8b319687a34e226c80" name="internals/core.read_cache_file.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="08209df8f3113b0d8322bcac3b5e055b" name="internals/core.rmdir.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="8834d9e9a8aa8473244d74096638b5c2" name="internals/core.rm_auto.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="f6452eb1f0f65cf3b07634228ea4c938" name="internals/core.run_insert_handler.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="0d87e492eb18ec8b4fa492f2ac34c163" name="internals/core.smarty_include_php.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="a000f4e24379b7dcc05603b2ad91c789" name="internals/core.write_cache_file.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ff7944e8092eaf7c2ee97d865df29788" name="internals/core.write_compiled_include.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="caa79e832d4587991606dd9a0988c852" name="internals/core.write_compiled_resource.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="23f99e19895028592cff61325b6ed0b1" name="internals/core.write_file.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="f4e1cc15997ff132066f5e4e09e92054" name="plugins/block.textformat.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b4f1eb6f5a8cde9dbec9f5fb1ccb108c" name="plugins/compiler.assign.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="0abdfebfea185a7b1a727d9546e244be" name="plugins/function.assign_debug_info.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="fa6466c59cab6333c64ac270dd6c53b1" name="plugins/function.config_load.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="9531e844efd007c593dadd6173cb0bbd" name="plugins/function.counter.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="db7b2e51bd5e26f93032929dcb2d531b" name="plugins/function.cycle.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="4963d564da17a2578fc5f56d9c53e7bc" name="plugins/function.debug.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="3fedd0e2a4c285200c12fe6427bc2739" name="plugins/function.eval.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="51259f99b6554fa1a6a60013a5e7880a" name="plugins/function.fetch.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="a05460918e36fd9ef66d955754868a3e" name="plugins/function.html_checkboxes.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="de11daabe07795fe4229b8d0185489dd" name="plugins/function.html_image.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b634076ab0424a5b8310ff733c5615a6" name="plugins/function.html_options.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="6a00315efe8f8202823ade3bf3e6e513" name="plugins/function.html_radios.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ad1d200bf750d98379cfc5507eac681d" name="plugins/function.html_select_date.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ac7c160c72b293e6509840a5aba9a429" name="plugins/function.html_select_time.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="d7ade8af24efeb33f852bef185004521" name="plugins/function.html_table.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="03b5b66b3c6221c34b0d27c030dc7b60" name="plugins/function.mailto.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="6cfac881d33e586406551b19296d8154" name="plugins/function.math.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="1e8b78080d08a386ba297c0dbb7c3a7b" name="plugins/function.popup.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b2353a42807535109e1f037c0d51f19c" name="plugins/function.popup_init.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="70f58c49c5bd2851be11a3d67a92d2a4" name="plugins/modifier.capitalize.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="9dbc6c2d6d78165d9d0ffae481509b6a" name="plugins/modifier.cat.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="91694b84f8b86aa551ff49ced16dbd11" name="plugins/modifier.count_characters.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="c64e0f47b6435424a7bf9647eed06c1e" name="plugins/modifier.count_paragraphs.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="c22e43e96e6ecd34cc18bc5235d59337" name="plugins/modifier.count_sentences.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="073467c9ea7434647bb9ff27fe09183b" name="plugins/modifier.count_words.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="5d57183abba166f670d0b8649086f516" name="plugins/modifier.date_format.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="083998f71b350e0f2bea5b46477680c2" name="plugins/modifier.debug_print_var.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="11c16bd6f7dde6d576d7f93433652925" name="plugins/modifier.default.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="3bd0b2464f2fe8e2688da39079d84190" name="plugins/modifier.escape.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ea1f5db88c00e850c3968e434eadb074" name="plugins/modifier.indent.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="5520933762ceac07d49e658c52587279" name="plugins/modifier.lower.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="1d16b98e8ec34aac69f0827fab1dc999" name="plugins/modifier.nl2br.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="f3ae42b7cb1bb85e22084c5d94ccb420" name="plugins/modifier.regex_replace.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b7d144b301a878c3015f9ba96b1922c6" name="plugins/modifier.replace.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="66993120ab60306acd278a327c5af448" name="plugins/modifier.spacify.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="401048107fc62eecf175d2a0ab997161" name="plugins/modifier.string_format.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b1281f77297db8c1e50bc1fd883ebd78" name="plugins/modifier.strip.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="481144a581e2d56a2182add2e09c5641" name="plugins/modifier.strip_tags.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="da35c3d0a2dfc9ea11c32b3a10246aa7" name="plugins/modifier.truncate.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="0ef0e9784273f5d5384f34ad303bd15e" name="plugins/modifier.upper.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="b80bdf801ac29e3aa4662a0428b676e4" name="plugins/modifier.wordwrap.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="ac1de570fd1361b24090ffce22b218e0" name="plugins/outputfilter.trimwhitespace.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="2f7221015323ba27d2ed5ae20450fa0d" name="plugins/shared.escape_special_chars.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="29ffe6553da8fda72147a12273105e10" name="plugins/shared.make_timestamp.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="8005e0d072190dd3a3c5d8d9e7ded373" name="Config_File.class.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="def6c6e062941c8b2986f9f977b26307" name="debug.tpl" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="4f280d0817540872d15dca8b10fa5df6" name="Smarty.class.php" role="php" />
+   <file baseinstalldir="/Smarty" md5sum="79d2d22090e76c555149a34a2bf23abd" name="Smarty_Compiler.class.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.0.6</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>2.6.26</release>
+    <api>2.6.26</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-10-25</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+PEAR Style Package
+   </notes>
+  </release>
+ </changelog>
+</package>

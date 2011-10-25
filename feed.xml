@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://pear.ethna.jp</id>
-    <updated>2011-10-25T22:03:27+09:00</updated>
+    <updated>2011-10-25T22:07:34+09:00</updated>
     <title>Ethna PEAR Channel Server Latest Releases</title>
     <link href="http://pear.ethna.jp/feed.xml" rel="self" />
     <author>
         <name>http://pear.ethna.jp</name>
     </author>
 
-
+    <entry>
+        <title>Ethna 2.6.0beta2011102501 (beta)</title>
+        <link href="http://pear.ethna.jp/get/Ethna-2.6.0beta2011102501.tgz" />
+        <id>http://pear.ethna.jp/get/Ethna-2.6.0beta2011102501.tgz</id>
+        <author>
+            <name>sotarok</name>
+        </author>
+        <updated>2011-10-25T01:30:29+09:00</updated>
+        <content>
+            
+Ethna PHP Web Application Framework
+ 
+        </content>
+    </entry>    <entry>
+        <title>Ethna 2.5.0 (stable)</title>
+        <link href="http://pear.ethna.jp/get/Ethna-2.5.0.tgz" />
+        <id>http://pear.ethna.jp/get/Ethna-2.5.0.tgz</id>
+        <author>
+            <name>fujimoto</name>
+        </author>
+        <updated>2009-10-18T03:07:43+09:00</updated>
+        <content>
+            
+Ethna PHP Web Application Framework
+ 
+        </content>
+    </entry>    <entry>
+        <title>Smarty 2.6.26 (stable)</title>
+        <link href="http://pear.ethna.jp/get/Smarty-2.6.26.tgz" />
+        <id>http://pear.ethna.jp/get/Smarty-2.6.26.tgz</id>
+        <author>
+            <name>monte</name>
+        </author>
+        <updated>2011-10-25T01:30:08+09:00</updated>
+        <content>
+            
+PEAR Style Package
+ 
+        </content>
+    </entry>    <entry>
+        <title>Smarty3 3.1.4 (stable)</title>
+        <link href="http://pear.ethna.jp/get/Smarty3-3.1.4.tgz" />
+        <id>http://pear.ethna.jp/get/Smarty3-3.1.4.tgz</id>
+        <author>
+            <name>monte</name>
+        </author>
+        <updated>2011-10-25T01:30:13+09:00</updated>
+        <content>
+            
+PEAR Style Package
+ 
+        </content>
+    </entry>    <entry>
+        <title>simpletest 1.1.0 (alpha)</title>
+        <link href="http://pear.ethna.jp/get/simpletest-1.1.0.tgz" />
+        <id>http://pear.ethna.jp/get/simpletest-1.1.0.tgz</id>
+        <author>
+            <name>lastcraft</name>
+        </author>
+        <updated>2011-10-25T01:30:23+09:00</updated>
+        <content>
+            
+PEAR Style Package
+ 
+        </content>
+    </entry>    <entry>
+        <title>simpletest 1.0.1 (stable)</title>
+        <link href="http://pear.ethna.jp/get/simpletest-1.0.1.tgz" />
+        <id>http://pear.ethna.jp/get/simpletest-1.0.1.tgz</id>
+        <author>
+            <name>lastcraft</name>
+        </author>
+        <updated>2011-10-25T01:30:18+09:00</updated>
+        <content>
+            
+PEAR Style Package
+ 
+        </content>
+    </entry>
 </feed>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>simpletest</name>
+ <channel>pear.ethna.jp</channel>
+ <summary>Unit testing, mock objects and web testing framework for PHP built around test cases.</summary>
+ <description>SimpleTest
+==========
+
+You probably got this package from:
+
+    http://simpletest.org/en/download.html
+
+If there is no licence agreement with this package please download
+a version from the location above. You must read and accept that
+licence to use this software. The file is titled simply LICENSE.
+
+What is it? It&apos;s a framework for unit testing, web site testing and
+mock objects for PHP 5.0.5+.
+
+If you have used JUnit, you will find this PHP unit testing version very
+similar. Also included is a mock objects and server stubs generator.
+The stubs can have return values set for different arguments, can have
+sequences set also by arguments and can return items by reference.
+The mocks inherit all of this functionality and can also have
+expectations set, again in sequences and for different arguments.
+
+A web tester similar in concept to JWebUnit is also included. There is no
+JavaScript or tables support, but forms, authentication, cookies and
+frames are handled.
+
+You can see a release schedule at http://simpletest.org/en/overview.html
+which is also copied to the documentation folder with this release.
+A full PHPDocumenter API documentation exists at
+http://simpletest.org/api/.
+
+The user interface is minimal in the extreme, but a lot of information 
+flows from the test suite. After version 1.0 we will release a better 
+web UI, but we are leaving XUL and GTK versions to volunteers as 
+everybody has their own opinion on a good GUI, and we don&apos;t want to 
+discourage development by shipping one with the toolkit. You can 
+download an Eclipse plug-in separately. 
+
+The unit tests for SimpleTest itself can be run here:
+
+    test/unit_tests.php
+
+And tests involving live network connections as well are here:
+
+    test/all_tests.php
+
+The full tests will typically overrun the 8Mb limit often allowed
+to a PHP process. A workaround is to run the tests on the command
+with a custom php.ini file or with the switch -dmemory_limit=-1
+if you do not have access to your server version.
+
+The full tests read some test data from simpletest.org. If the site
+is down or has been modified for a later version then you will get
+spurious errors. A unit_tests.php failure on the other hand would be
+very serious. Please notify us if you find one.
+
+Even if all of the tests run please verify that your existing test suites
+also function as expected. The file:
+
+    HELP_MY_TESTS_DONT_WORK_ANYMORE
+
+...contains information on interface changes. It also points out
+deprecated interfaces, so you should read this even if all of
+your current tests appear to run.
+
+There is a documentation folder which contains the core reference information
+in English and French, although this information is fairly basic.
+You can find a tutorial on...
+
+    http://simpletest.org/en/first_test_tutorial.html
+
+...to get you started and this material will eventually become included
+with the project documentation. A French translation exists at:
+
+    http://simpletest.org/fr/first_test_tutorial.html
+
+If you download and use, and possibly even extend this tool, please let us
+know. Any feedback, even bad, is always welcome and we will work to get
+your suggestions into the next release. Ideally please send your
+comments to:
+
+    simpletest-support@lists.sourceforge.net
+
+...so that others can read them too. We usually try to respond within 48
+hours.
+
+There is no change log except at Sourceforge. You can visit the
+release notes to see the completed TODO list after each cycle and also the
+status of any bugs, but if the bug is recent then it will be fixed in SVN only.
+The SVN check-ins always have all the tests passing and so SVN snapshots should
+be pretty usable, although the code may not look so good internally.
+
+Oh, and one last thing: SimpleTest is called &quot;Simple&quot; because it should 
+be simple to use. We intend to add a complete set of tools for a test 
+first and &quot;test as you code&quot; type of development. &quot;Simple&quot; does not mean 
+&quot;Lite&quot; in this context. 
+
+Thanks to everyone who has sent comments and offered suggestions. They
+really are invaluable, but sadly you are too many to mention in full.
+Thanks to all on the advanced PHP forum on SitePoint, especially Harry
+Fuecks. Early adopters are always an inspiration.
+
+ -- Marcus Baker, Jason Sweat, Travis Swicegood, Perrick Penet and Edward Z. Yang.</description>
+ <lead>
+  <name>lastcraft</name>
+  <user>lastcraft</user>
+  <email>lastcraft at users.sourceforge.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-10-25</date>
+ <time>01:30:23</time>
+ <version>
+  <release>1.1.0</release>
+  <api>1.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+PEAR Style Package
+ </notes>
+ <contents>
+  <dir baseinstalldir="/simpletest" name="/">
+   <file baseinstalldir="/simpletest" md5sum="3580a6d9f0320ee76d805caa4dd85d0b" name="docs/en/authentication_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="b0e9f2df68b7e431395805f45c33364d" name="docs/en/browser_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="5b7dbf32aa4131ede54d0fe94132679c" name="docs/en/docs.css" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="32d0841d0a54122f12ffd9675522ce0c" name="docs/en/expectation_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="eede550f9440d9804a6f2d6d5207d7bf" name="docs/en/form_testing_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="26b22d4058e788f3fa92ed51021d21b7" name="docs/en/group_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="328a85dd1f0be07c22526023cb941dff" name="docs/en/index.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="11cc97b1a544075aa6d353ad93e2b6f9" name="docs/en/mock_objects_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="1eb3b5b7b2e7cf7d86555702a5cd2a86" name="docs/en/overview.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="8afde3cb4b1e6f7bed44fe1eb614c655" name="docs/en/partial_mocks_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="0d8c9e53a34fb4a3b32950d3306eff8b" name="docs/en/reporter_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="bc0fce888ef4b96e9ba4605ebbfe0981" name="docs/en/unit_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="4462351adf365f4f5d89b2c01139a4c1" name="docs/en/web_tester_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="32bdd92129ee276f9d37e15bb544ab49" name="docs/fr/authentication_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="2fb05a8788a2ef85db1ebeb6772844bc" name="docs/fr/browser_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="0f93d4963f3ff9e76560b8a6e347311c" name="docs/fr/docs.css" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="30c21efa4e5fa17c4b5b29e72424ac19" name="docs/fr/expectation_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="d9c285511a83dce581a41167eafdebef" name="docs/fr/form_testing_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="51f5fd808319e38d064ee0001fe9ef6b" name="docs/fr/group_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="9c7a217c86c27c376a976209aa1a3502" name="docs/fr/index.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="1dae59c2e413ed71d239b15b02d690f4" name="docs/fr/mock_objects_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="fdbcb7f3b9111b543132593072ed064b" name="docs/fr/overview.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="0f41caad1565d3310517b393ccb81213" name="docs/fr/partial_mocks_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="29e0be6d4ad644c0b4cc66c8ffbab694" name="docs/fr/reporter_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="c07187c302f343d94e2f56f44ef433b9" name="docs/fr/unit_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="d71a20aca91e91b73b14146bc03bc036" name="docs/fr/web_tester_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="3fe0659667ff8bc054fefdd334a6ce58" name="extensions/testdox/test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a836802c0bc67c47aee179979e847a6c" name="extensions/pear_test_case.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="73f11526511d664ea11b3efdd2fc9830" name="extensions/testdox.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="4c163986c2dc1f8e74a4069184efb486" name="test/site/file.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="test/support/collector/collectable.1" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="test/support/collector/collectable.2" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="747496d233dd16252f14ac9e94f4047e" name="test/support/empty_test_file.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="faa3efde68aadc2a4b94a902e54fa04c" name="test/support/failing_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="e0e4859fcd6072bedb7aa1b6377d7ff1" name="test/support/latin1_sample" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="3bb522148f471cfe416cbbdde8c2f52d" name="test/support/passing_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="607e14ae106334fcd476c10229108a8a" name="test/support/spl_examples.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="dd7472fdc569c968f2b14e0ad0f13a9b" name="test/support/supplementary_upload_sample.txt" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="fa1ad0aae96c81e9eedaefdf9e1ee971" name="test/support/test1.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="0ce6cebb8d7754c9d4484ce78611d24d" name="test/support/upload_sample.txt" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="c6ee8f8135e5cbf1c2d3da81dc6ea234" name="test/acceptance_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="111ca103ac802130d2285135e629e99d" name="test/adapter_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="cf395413f086675894674b331644d26c" name="test/all_tests.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="105bc700c2b4f4ee8b910929049b260b" name="test/authentication_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="b2f18b3829976d867730fdddd44afdc1" name="test/autorun_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="b074e3650d82f46727f3ca7c99aa7b2b" name="test/bad_test_suite.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="019fdce11bb919e930f8e1336a91b83f" name="test/browser_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="88e19f96aa0f73edbebad9143f841a76" name="test/collector_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="35200bb34bdf0ff1bf549fadc2e4ba12" name="test/command_line_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="25516845fccf96266b623619651b2f87" name="test/compatibility_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="5881ab682a47c1cebe2e481ed8dce41f" name="test/cookies_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="71bdddc83b4f3d95cd8b893897f39137" name="test/detached_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="606c78a428b0732746b21b1943914dfa" name="test/dumper_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="9600bea1564acfd0853b846ac52053d1" name="test/eclipse_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="b874c5e074692475c3f4dfb0d50bf4f0" name="test/encoding_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="cfb17661312c034889e795dcd0187ec6" name="test/errors_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="aa67c88301c903306d5bb48d294c2840" name="test/exceptions_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="af09df52c7feee4064284b8edf7344ba" name="test/expectation_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="b739d690c271ce00c7a2fbc051d7d69f" name="test/form_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="313fb6e392f307877aa54d1eca73fbfb" name="test/frames_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="9dea14b29ab2136582a33c4232880df5" name="test/http_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="34fe900a3eddf1a6dc3fff68463cacbd" name="test/interfaces_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="3fed2c081527ce61268dfc9fee33139d" name="test/interfaces_test_php5_1.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="7ca11eda571fb0b5ddf8e90d78f767db" name="test/live_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="ac349818b93e7658dee4e45f713298e3" name="test/mock_objects_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="28df25f77fb5544c0eedd0f1f22e46f9" name="test/page_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="3a80116606ae850381878b67bd3b16bd" name="test/parse_error_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="4a31bf3c5f2868a9af26ec00fa99b9e7" name="test/parsing_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="78b319ff1340087c34a01ef46564c015" name="test/php_parser_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="9b6501d8c6d0b6dd402aa971bc411056" name="test/reflection_php4_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="123768b3fa1c0981d87275bfb94d0356" name="test/reflection_php5_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="4793c87c073cb00c2c5b6e5102a98986" name="test/remote_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="1fccfdfe6d599d7b9154a2032696c548" name="test/shell_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a45b12c9a162254291987f0fe370e1e0" name="test/shell_tester_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="424027ab4cd05f61b314510bebb6a5bb" name="test/simpletest_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="49ec2994ae655de0e6321fe66f903878" name="test/socket_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="5f1f3e7daf8965c8723c131915f57f9d" name="test/tag_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="d706551329189bc0587f18129a85fe2c" name="test/test_with_parse_error.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="545120bead725a1510c042e68dec6117" name="test/unit_tester_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="86da8e4110c6ac015183b028f1c38a76" name="test/unit_tests.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a90d4b070fa15c9ab0bd631905cddd23" name="test/url_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a5f75014b43601bd78860ec9038614b3" name="test/user_agent_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="87ecc5126e1b214c3d33bbd16231af3a" name="test/visual_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="01919572a138f4f6de41b9008679d7bf" name="test/web_tester_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="bc56ce98184721afa83d6de0d57c2665" name="test/xml_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="dd5ea83d362f3395d42097551f50bbe9" name="authentication.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="16161274e997ec724dfea0d0d861064d" name="autorun.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="6ed9edf2a341523b162b318b3d0b4591" name="browser.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="0bb96536665ddc71b4b39d1bdd395afb" name="collector.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="693b357674923b8de771cc9093c513e3" name="compatibility.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="8f0a1af49c148bc41194c6028285f0ab" name="cookies.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="2527cc9a628fb838370a18663a62a28e" name="default_reporter.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="ed7bb5df90a58f3535ee327929047623" name="detached.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="c4ee7db3b1d2a12fae66a2aa3d5b0416" name="dumper.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="266f6bed8198de2c6bcff94b411a1161" name="eclipse.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="744c19ced7fc56fa0b68654b06a0b410" name="encoding.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="ac194c30cbd0540656ed9a10c6311f81" name="errors.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="0f525c7dbc1aea0dd673102623aec69e" name="exceptions.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="5b80c2e54e316d5f803562909a0d83e5" name="expectation.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="6e90378af951013b84552d8bfadeba90" name="form.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a109bbc8593a89913c0db5b431926dc8" name="frames.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="3f406bdc4f474b19e7063a816796fbe5" name="HELP_MY_TESTS_DONT_WORK_ANYMORE" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="91cd6f254f48b760d39c16525cf30765" name="http.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="c0859295ddd18852bfa041160c97ba79" name="invoker.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="5804fe91d3294da4ac47c02b454bbc8a" name="LICENSE" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="4243ff3224d3f3f38ccb8c053ed69d3d" name="mock_objects.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="90e5c8cd572f08ba6f6c5e7049cb08a0" name="page.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="0f91251d9e050a1a8dadce6e958ca21b" name="php_parser.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="52ea58efa022a6e9386130a0b928243b" name="README" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="431d53ce9ecc0ca6d8ab5076ceb8a0be" name="reflection_php4.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="82b294fc03459ddb03fffe000100e76c" name="reflection_php5.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="5bbc96ae42672d67e9557c382370c24f" name="remote.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="3374be003da09c868ccdfc163f4b9bc1" name="reporter.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="78f754bdaf75b3cd1072dbe9787a0668" name="scorer.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="05d3224a4fdf6e605164c1ae981290e9" name="selector.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="02517969d5761f102f4e38dcb399f07d" name="shell_tester.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="9a445e6a3db05813c3d9df4d640c214e" name="simpletest.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="987713db91a341b50a0d0696539353df" name="socket.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="094d0d54df5f13cde7f46ef275d10e01" name="tag.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="4bcad27935c73e6186ac2cf4b3c4966d" name="test_case.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="afb2062671500784ffd97908d4ea5d5c" name="tidy_parser.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="00a1589b57ed78f80115816e61c0a349" name="unit_tester.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="8d11e2ce68992933b7e082498020061e" name="url.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="cf5be589666839ea1cbb447908d65b43" name="user_agent.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="cbc6a5ca4911575dfc919079e0a995ff" name="VERSION" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="2ff3a4aa0c5310b3b28cae443144440f" name="web_tester.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="fa55636bd706e3828a0f9ad96c956be6" name="xml.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.5</min>
+   </php>
+   <pearinstaller>
+    <min>1.9.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2011-10-25</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+PEAR Style Package
+   </notes>
+  </release>
+ </changelog>
+</package>

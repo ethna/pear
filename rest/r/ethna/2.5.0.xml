@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+    <p xlink:href="/rest/p/ethna">Ethna</p>
+    <c>pear.ethna.jp</c>
+    <v>2.5.0</v>
+    <st>stable</st>
+    <l>The BSD License</l>
+    <m>fujimoto</m>
+    <s>Ethna PHP Framework Package</s>
+    <d>Ethna Web Application Framework</d>
+    <da>2009-10-18 03:07:43</da>
+    <n>
+Ethna PHP Web Application Framework
+ </n>
+    <f>241455</f>
+    <g>http://pear.ethna.jp/get/Ethna-2.5.0</g>
+    <x xlink:href="package.2.5.0.xml"/>
+</r>
