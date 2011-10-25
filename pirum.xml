@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server>
+    <name>pear.ethna.jp</name>
+    <summary>Ethna PEAR Channel Server</summary>
+    <alias>ethna</alias>
+    <url>http://pear.ethna.jp/</url>
+</server>

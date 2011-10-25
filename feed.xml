@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://pear.ethna.jp</id>
+    <updated>2011-10-25T22:03:27+09:00</updated>
+    <title>Ethna PEAR Channel Server Latest Releases</title>
+    <link href="http://pear.ethna.jp/feed.xml" rel="self" />
+    <author>
+        <name>http://pear.ethna.jp</name>
+    </author>
+
+
+</feed>
