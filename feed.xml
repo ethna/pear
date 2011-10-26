@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://pear.ethna.jp</id>
-    <updated>2011-10-25T23:08:18+09:00</updated>
+    <updated>2011-10-26T23:41:23+09:00</updated>
     <title>Ethna PEAR Channel Server Latest Releases</title>
     <link href="http://pear.ethna.jp/feed.xml" rel="self" />
     <author>
@@ -16,19 +16,6 @@
             <name>sotarok</name>
         </author>
         <updated>2011-10-25T22:51:27+09:00</updated>
-        <content>
-            
-Ethna PHP Web Application Framework
- 
-        </content>
-    </entry>    <entry>
-        <title>Ethna 2.6.0beta2011102501 (beta)</title>
-        <link href="http://pear.ethna.jp/get/Ethna-2.6.0beta2011102501.tgz" />
-        <id>http://pear.ethna.jp/get/Ethna-2.6.0beta2011102501.tgz</id>
-        <author>
-            <name>sotarok</name>
-        </author>
-        <updated>2011-10-25T01:30:29+09:00</updated>
         <content>
             
 Ethna PHP Web Application Framework
