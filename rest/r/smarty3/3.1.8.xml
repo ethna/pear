@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
-    <p xlink:href="/rest/p/simpletest">simpletest</p>
+    <p xlink:href="/rest/p/smarty3">Smarty3</p>
     <c>pear.ethna.jp</c>
-    <v>1.1.0</v>
+    <v>3.1.8</v>
     <st>stable</st>
     <l>LGPL</l>
-    <m>lastcraft</m>
-    <s>Unit testing, mock objects and web testing framework for PHP built around test cases.</s>
-    <d>The SimpleTest PHP unit tester.</d>
-    <da>2012-03-26 03:09:02</da>
+    <m>monte</m>
+    <s>PHP Template Engine</s>
+    <d>Smarty is a template engine for PHP, facilitating the separation of presentation from application logic.</d>
+    <da>2012-03-26 03:08:55</da>
     <n>
 PEAR Style Package
  </n>
-    <f>289405</f>
-    <g>http://pear.ethna.jp/get/simpletest-1.1.0</g>
-    <x xlink:href="package.1.1.0.xml"/>
+    <f>150911</f>
+    <g>http://pear.ethna.jp/get/Smarty3-3.1.8</g>
+    <x xlink:href="package.3.1.8.xml"/>
 </r>

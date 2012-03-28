@@ -5,16 +5,16 @@
     <v>1.1.0</v>
     <a>1.1.0</a>
     <mp>5.0.5</mp>
-    <st>alpha</st>
+    <st>stable</st>
     <l>LGPL</l>
     <m>lastcraft</m>
     <s>Unit testing, mock objects and web testing framework for PHP built around test cases.</s>
     <d>The SimpleTest PHP unit tester.</d>
-    <da>2011-10-25 22:51:24</da>
+    <da>2012-03-26 03:09:02</da>
     <n>
 PEAR Style Package
  </n>
-    <f>283262</f>
+    <f>289405</f>
     <g>http://pear.ethna.jp/get/simpletest-1.1.0</g>
     <x xlink:href="package.1.1.0.xml"/>
 </r>

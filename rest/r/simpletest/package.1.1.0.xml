@@ -10,15 +10,15 @@
   <email>lastcraft at users.sourceforge.net</email>
   <active>yes</active>
  </lead>
- <date>2011-10-25</date>
- <time>22:51:24</time>
+ <date>2012-03-26</date>
+ <time>03:09:02</time>
  <version>
   <release>1.1.0</release>
   <api>1.1.0</api>
  </version>
  <stability>
-  <release>alpha</release>
-  <api>alpha</api>
+  <release>stable</release>
+  <api>stable</api>
  </stability>
  <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
  <notes>
@@ -36,21 +36,21 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="11cc97b1a544075aa6d353ad93e2b6f9" name="docs/en/mock_objects_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="1eb3b5b7b2e7cf7d86555702a5cd2a86" name="docs/en/overview.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="8afde3cb4b1e6f7bed44fe1eb614c655" name="docs/en/partial_mocks_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="0d8c9e53a34fb4a3b32950d3306eff8b" name="docs/en/reporter_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="b3364ece1954cd5a2b2d4ab55f40430c" name="docs/en/reporter_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="bc0fce888ef4b96e9ba4605ebbfe0981" name="docs/en/unit_test_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="4462351adf365f4f5d89b2c01139a4c1" name="docs/en/web_tester_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="32bdd92129ee276f9d37e15bb544ab49" name="docs/fr/authentication_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="1296771b3d3dfefc23513890d599f4a4" name="docs/fr/authentication_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="2fb05a8788a2ef85db1ebeb6772844bc" name="docs/fr/browser_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="0f93d4963f3ff9e76560b8a6e347311c" name="docs/fr/docs.css" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="30c21efa4e5fa17c4b5b29e72424ac19" name="docs/fr/expectation_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="d9c285511a83dce581a41167eafdebef" name="docs/fr/form_testing_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="51f5fd808319e38d064ee0001fe9ef6b" name="docs/fr/group_test_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="9c7a217c86c27c376a976209aa1a3502" name="docs/fr/index.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="1dae59c2e413ed71d239b15b02d690f4" name="docs/fr/mock_objects_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="263f8805d58554f2dbb681cdfc9b1ac6" name="docs/fr/form_testing_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="b73deece519cd1bde3f0d8574cfa81e3" name="docs/fr/group_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="3f15ac82a187d462d1e200f61e3d6d22" name="docs/fr/index.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="08775628308702744c68eae876b0ddb3" name="docs/fr/mock_objects_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="fdbcb7f3b9111b543132593072ed064b" name="docs/fr/overview.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="0f41caad1565d3310517b393ccb81213" name="docs/fr/partial_mocks_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="29e0be6d4ad644c0b4cc66c8ffbab694" name="docs/fr/reporter_documentation.html" role="doc" />
-   <file baseinstalldir="/simpletest" md5sum="c07187c302f343d94e2f56f44ef433b9" name="docs/fr/unit_test_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="b81a4c38500096de237ab994d12dc6eb" name="docs/fr/partial_mocks_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="fca230d47ec90543d36b91ea6eb98b32" name="docs/fr/reporter_documentation.html" role="doc" />
+   <file baseinstalldir="/simpletest" md5sum="8b008891cbd5d266ff053262d5701548" name="docs/fr/unit_test_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="d71a20aca91e91b73b14146bc03bc036" name="docs/fr/web_tester_documentation.html" role="doc" />
    <file baseinstalldir="/simpletest" md5sum="3fe0659667ff8bc054fefdd334a6ce58" name="extensions/testdox/test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="a836802c0bc67c47aee179979e847a6c" name="extensions/pear_test_case.php" role="php" />
@@ -62,6 +62,7 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="faa3efde68aadc2a4b94a902e54fa04c" name="test/support/failing_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="e0e4859fcd6072bedb7aa1b6377d7ff1" name="test/support/latin1_sample" role="data" />
    <file baseinstalldir="/simpletest" md5sum="3bb522148f471cfe416cbbdde8c2f52d" name="test/support/passing_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a751595c57a5e4b5703e8d7b99490cf2" name="test/support/recorder_sample.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="607e14ae106334fcd476c10229108a8a" name="test/support/spl_examples.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="dd7472fdc569c968f2b14e0ad0f13a9b" name="test/support/supplementary_upload_sample.txt" role="data" />
    <file baseinstalldir="/simpletest" md5sum="fa1ad0aae96c81e9eedaefdf9e1ee971" name="test/support/test1.php" role="php" />
@@ -69,6 +70,7 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="c6ee8f8135e5cbf1c2d3da81dc6ea234" name="test/acceptance_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="111ca103ac802130d2285135e629e99d" name="test/adapter_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="cf395413f086675894674b331644d26c" name="test/all_tests.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="af57ce41b865bb9fb2a7842c1e374d6d" name="test/arguments_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="105bc700c2b4f4ee8b910929049b260b" name="test/authentication_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="b2f18b3829976d867730fdddd44afdc1" name="test/autorun_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="b074e3650d82f46727f3ca7c99aa7b2b" name="test/bad_test_suite.php" role="php" />
@@ -95,7 +97,7 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="3a80116606ae850381878b67bd3b16bd" name="test/parse_error_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="4a31bf3c5f2868a9af26ec00fa99b9e7" name="test/parsing_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="78b319ff1340087c34a01ef46564c015" name="test/php_parser_test.php" role="php" />
-   <file baseinstalldir="/simpletest" md5sum="9b6501d8c6d0b6dd402aa971bc411056" name="test/reflection_php4_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="281ad5b690b50859c2dd4607dc521a45" name="test/recorder_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="123768b3fa1c0981d87275bfb94d0356" name="test/reflection_php5_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="4793c87c073cb00c2c5b6e5102a98986" name="test/remote_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="1fccfdfe6d599d7b9154a2032696c548" name="test/shell_test.php" role="php" />
@@ -111,8 +113,9 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="87ecc5126e1b214c3d33bbd16231af3a" name="test/visual_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="01919572a138f4f6de41b9008679d7bf" name="test/web_tester_test.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="bc56ce98184721afa83d6de0d57c2665" name="test/xml_test.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="66113f16221e18deb7f1efb71842125e" name="arguments.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="dd5ea83d362f3395d42097551f50bbe9" name="authentication.php" role="php" />
-   <file baseinstalldir="/simpletest" md5sum="16161274e997ec724dfea0d0d861064d" name="autorun.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="a86e038a1fac35cccc12a4508035c2c6" name="autorun.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="6ed9edf2a341523b162b318b3d0b4591" name="browser.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="0bb96536665ddc71b4b39d1bdd395afb" name="collector.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="693b357674923b8de771cc9093c513e3" name="compatibility.php" role="php" />
@@ -135,10 +138,11 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="90e5c8cd572f08ba6f6c5e7049cb08a0" name="page.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="0f91251d9e050a1a8dadce6e958ca21b" name="php_parser.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="52ea58efa022a6e9386130a0b928243b" name="README" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="4014a2525f600df42c883c4507ad19fa" name="recorder.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="431d53ce9ecc0ca6d8ab5076ceb8a0be" name="reflection_php4.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="82b294fc03459ddb03fffe000100e76c" name="reflection_php5.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="5bbc96ae42672d67e9557c382370c24f" name="remote.php" role="php" />
-   <file baseinstalldir="/simpletest" md5sum="3374be003da09c868ccdfc163f4b9bc1" name="reporter.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="58b796a965624f3d0a21e6927449bf03" name="reporter.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="78f754bdaf75b3cd1072dbe9787a0668" name="scorer.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="05d3224a4fdf6e605164c1ae981290e9" name="selector.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="02517969d5761f102f4e38dcb399f07d" name="shell_tester.php" role="php" />
@@ -149,8 +153,8 @@ PEAR Style Package
    <file baseinstalldir="/simpletest" md5sum="afb2062671500784ffd97908d4ea5d5c" name="tidy_parser.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="00a1589b57ed78f80115816e61c0a349" name="unit_tester.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="8d11e2ce68992933b7e082498020061e" name="url.php" role="php" />
-   <file baseinstalldir="/simpletest" md5sum="cf5be589666839ea1cbb447908d65b43" name="user_agent.php" role="php" />
-   <file baseinstalldir="/simpletest" md5sum="cbc6a5ca4911575dfc919079e0a995ff" name="VERSION" role="data" />
+   <file baseinstalldir="/simpletest" md5sum="272affae707a3104609ddb8215a052c9" name="user_agent.php" role="php" />
+   <file baseinstalldir="/simpletest" md5sum="30a04cf33ee91a3ecf4b75c71268f316" name="VERSION" role="data" />
    <file baseinstalldir="/simpletest" md5sum="2ff3a4aa0c5310b3b28cae443144440f" name="web_tester.php" role="php" />
    <file baseinstalldir="/simpletest" md5sum="fa55636bd706e3828a0f9ad96c956be6" name="xml.php" role="php" />
   </dir>
@@ -173,10 +177,10 @@ PEAR Style Package
     <api>1.1.0</api>
    </version>
    <stability>
-    <release>alpha</release>
-    <api>alpha</api>
+    <release>stable</release>
+    <api>stable</api>
    </stability>
-   <date>2011-10-25</date>
+   <date>2012-03-26</date>
    <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
    <notes>
 PEAR Style Package

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Smarty3</name>
+ <channel>pear.ethna.jp</channel>
+ <summary>PHP Template Engine</summary>
+ <description>Smarty is a template engine for PHP, facilitating the separation of presentation from application logic.</description>
+ <lead>
+  <name>Monte Ohrt</name>
+  <user>monte</user>
+  <email>monte@ohrt.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Andrei Zmievski</name>
+  <user>andrei</user>
+  <email>andrei@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-03-26</date>
+ <time>03:08:55</time>
+ <version>
+  <release>3.1.8</release>
+  <api>3.1.8</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+PEAR Style Package
+ </notes>
+ <contents>
+  <dir baseinstalldir="/Smarty3" name="/">
+   <file baseinstalldir="/Smarty3" md5sum="3617722d1d24099e712b89b15ef3f9d2" name="plugins/block.textformat.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="95d9f4a7de57872c3946463948cb01f6" name="plugins/function.counter.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bf71dfcaf7676619cc0526f327022035" name="plugins/function.cycle.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="7d6c587eded457030cf6215b1ceda9e7" name="plugins/function.fetch.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a92d04b43b0f88529af8e127df3c074a" name="plugins/function.html_checkboxes.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="44ce90ae82fbb042febe414a83e7e541" name="plugins/function.html_image.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="76b52be3d321e6089bb6a3b19401b02c" name="plugins/function.html_options.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ed934b586d1957bbabbb9230d7b81328" name="plugins/function.html_radios.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a637ac29790c3a851682a86840f363d4" name="plugins/function.html_select_date.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="4f7fccd8595d5211958c7123ee82c98a" name="plugins/function.html_select_time.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="172491d13ad37f0b82de821758b21dd2" name="plugins/function.html_table.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="688de6be86911509c038b6719ea00207" name="plugins/function.mailto.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0b891f2679f8b1d275e2e3f53489fde5" name="plugins/function.math.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3c547dde36e8dba58615593e66d83421" name="plugins/modifier.capitalize.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f7f23fe9694e7f364d98451fac3f8916" name="plugins/modifier.date_format.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="62200393fd598016767e97844236a636" name="plugins/modifier.debug_print_var.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="426a494511d56a7528acb26cf0016418" name="plugins/modifier.escape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="21bb39afa1b7fd6de675e554b5e43143" name="plugins/modifier.regex_replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f8270ab6f2d3d8eb695192e4e83da0c9" name="plugins/modifier.replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f9ed4a1782aefe0a248fb3a4cd384b67" name="plugins/modifier.spacify.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="202d2f3d351a514e68278933bf38fed3" name="plugins/modifier.truncate.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ea240a56cdf2a6ba96e77dd3b11c9d2a" name="plugins/modifiercompiler.cat.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a098260b037336c38e9a968a24ef1af0" name="plugins/modifiercompiler.count_characters.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd26736080dcabee8f1a7aabf21d0b00" name="plugins/modifiercompiler.count_paragraphs.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1bf1e2101c791f52590c1a730b5457de" name="plugins/modifiercompiler.count_sentences.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="5b7d5fc764088e0e311891571aab765d" name="plugins/modifiercompiler.count_words.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d72bbffe79f92d04af143c36ede00d8d" name="plugins/modifiercompiler.default.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="138dad0cacf3cfdb301bb7b2b640627a" name="plugins/modifiercompiler.escape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="58f6df002c37a675627dc2b54680ad69" name="plugins/modifiercompiler.from_charset.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f329df84ba10c052f4f50022facd6f9d" name="plugins/modifiercompiler.indent.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="dbfbf8481ea1fbb957b24c668950d764" name="plugins/modifiercompiler.lower.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="33451b823afdfe8271c402cdabf61d57" name="plugins/modifiercompiler.noprint.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f610c9fb402d248c025369295b276bcb" name="plugins/modifiercompiler.string_format.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8e9ebc83db0535d93d05ecb207a06e1f" name="plugins/modifiercompiler.strip.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bdf3af4b31f661477f7f168bcf16bc45" name="plugins/modifiercompiler.strip_tags.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6b1c512dd3856f10a83a361abee25362" name="plugins/modifiercompiler.to_charset.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="59ad568fe58a28454becd4d7d107b143" name="plugins/modifiercompiler.unescape.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="15cda038b7ce9950d0cc4c930334adf3" name="plugins/modifiercompiler.upper.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="000f15f863125c3600cdfc8d1df3fed7" name="plugins/modifiercompiler.wordwrap.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="9d32d6eea2817433c313b66541ffaa31" name="plugins/outputfilter.trimwhitespace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="fe3f159f1e6c044f871a94e7d8cb2ad8" name="plugins/shared.escape_special_chars.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b58133b86971c14412d8413753187057" name="plugins/shared.literal_compiler_param.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c340857831b985f96412639486ca6bf1" name="plugins/shared.make_timestamp.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="00ad04ec798345c9da214d4eae1c8ba5" name="plugins/shared.mb_str_replace.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e33a704313f3200eb17bf91f4ae6c893" name="plugins/shared.mb_unicode.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c75cc8402ca9afa6d5c5e42d9af1b039" name="plugins/shared.mb_wordwrap.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="06361b7471df67d9801ba2a4c1b2c61f" name="plugins/variablefilter.htmlspecialchars.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2c59e77ca763deec50d3df6a474ba56e" name="sysplugins/smarty_cacheresource.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="30a9c1480db001fd4a3a7c80e7dc5a15" name="sysplugins/smarty_cacheresource_custom.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c2fb3e1b6a45c9d095c3e1b8aa08eed7" name="sysplugins/smarty_cacheresource_keyvaluestore.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ffaba159a9b9295d625463529cb97e4b" name="sysplugins/smarty_config_source.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="14d61f4c108f3969af138333358e2ba4" name="sysplugins/smarty_internal_cacheresource_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3d702028ec4c6da241089a03bff21f35" name="sysplugins/smarty_internal_compilebase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="fd71acfc5c29f7e2d006f993da663282" name="sysplugins/smarty_internal_compile_append.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="9eb25a7ebf07f68434c2578f641295d7" name="sysplugins/smarty_internal_compile_assign.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="401d20928bf89b14c5fa27e444a54515" name="sysplugins/smarty_internal_compile_block.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="4670ea85f8d6c28abacc1b643591008d" name="sysplugins/smarty_internal_compile_break.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a8cadf2371b55a19df886564f6fd38b5" name="sysplugins/smarty_internal_compile_call.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c554049d043ac4153a1b2f7d1b9e03d7" name="sysplugins/smarty_internal_compile_capture.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1e825ed2e87e3a3b13fde0a6ebb5bf25" name="sysplugins/smarty_internal_compile_config_load.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6e4051e804122cce52c9f1fa85acabc5" name="sysplugins/smarty_internal_compile_continue.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="9d9de7480cc8b1db09b499746a03f626" name="sysplugins/smarty_internal_compile_debug.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd94ce97541001366b480793896def3e" name="sysplugins/smarty_internal_compile_eval.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="1d5af2e98529bb04854628b74b9a5d2c" name="sysplugins/smarty_internal_compile_extends.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e3d5ae048127268304e498e2f8a5915a" name="sysplugins/smarty_internal_compile_for.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="559a83858780818d67930de06f2121bb" name="sysplugins/smarty_internal_compile_foreach.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a084a3a078a64aa93cb6ec395fb42123" name="sysplugins/smarty_internal_compile_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6af854504afba39fa0aed452de0036c9" name="sysplugins/smarty_internal_compile_if.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="a86958d231521c4a73eb921bb66b6ff9" name="sysplugins/smarty_internal_compile_include.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="50a88eb174e0427f6edfbd904e5af08c" name="sysplugins/smarty_internal_compile_include_php.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b4daff7b0c97e643ab15e4a15f20b274" name="sysplugins/smarty_internal_compile_insert.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b60cb0ce76c23b2f7e3a2cf5dd4c3137" name="sysplugins/smarty_internal_compile_ldelim.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="69a46fc75b04eb964be159aa7e54647f" name="sysplugins/smarty_internal_compile_nocache.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="79014775c7cc64452e44a1ef14121626" name="sysplugins/smarty_internal_compile_private_block_plugin.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ebacfa8d7fe15f32a44e0a8ab71bea63" name="sysplugins/smarty_internal_compile_private_function_plugin.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ce4d8bee71f87b298a2187229c46e8c3" name="sysplugins/smarty_internal_compile_private_modifier.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="54bb13f2e9587fa2ac24a3c04ba48bd6" name="sysplugins/smarty_internal_compile_private_object_block_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8fd66a8f2ae3d20b03f10f66e36a3995" name="sysplugins/smarty_internal_compile_private_object_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="91c12f055117d35a8cc72b412eed9099" name="sysplugins/smarty_internal_compile_private_print_expression.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="79fdd5de62ab820c10ab14a9437f69bf" name="sysplugins/smarty_internal_compile_private_registered_block.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e1b54ebd4683180c6d0846e9cfaf7e29" name="sysplugins/smarty_internal_compile_private_registered_function.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3212b4491280100b70180dad3031bc4d" name="sysplugins/smarty_internal_compile_private_special_variable.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e0ad02a506e0b44f956c14d291e329c3" name="sysplugins/smarty_internal_compile_rdelim.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="f52e128ee2f15a355b3207287763c00c" name="sysplugins/smarty_internal_compile_section.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="7187949d5e69602674612566b801050e" name="sysplugins/smarty_internal_compile_setfilter.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="69000a5d77d53d406cbdc7e3d317aa51" name="sysplugins/smarty_internal_compile_while.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="2b1d37c3a622f6d70d07513907e6a442" name="sysplugins/smarty_internal_config.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="77de7b21e041b8190d912ebeb6ca72e9" name="sysplugins/smarty_internal_configfilelexer.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="476fdc1e62dc94e12a4cfc8e23dbf336" name="sysplugins/smarty_internal_configfileparser.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="ed648487b57c657089be98eac7ea94a1" name="sysplugins/smarty_internal_config_file_compiler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0be378cac66bae8bc28e3eb305f369de" name="sysplugins/smarty_internal_data.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="95fb21bdb36386c711c7ce2024841a71" name="sysplugins/smarty_internal_debug.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="0f826812544232e25132593a203ef59d" name="sysplugins/smarty_internal_filter_handler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="666ac04e7ff49fd065926b35418513eb" name="sysplugins/smarty_internal_function_call_handler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6d57f412bdb9ed346324b5a0f9bc632f" name="sysplugins/smarty_internal_get_include_path.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6e94e24717edab0bf3dd12c65752364b" name="sysplugins/smarty_internal_nocache_insert.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="bd56249369096911858e70d0ed7ce6bd" name="sysplugins/smarty_internal_parsetree.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="67aa045f646794349a17c4ec4dfa2f0d" name="sysplugins/smarty_internal_resource_eval.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b01efc9b7bbbdad22d8110c07ca0447a" name="sysplugins/smarty_internal_resource_extends.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e19b25703f5209ad1c094fa21d0b71e4" name="sysplugins/smarty_internal_resource_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d719177ec017f38ebd07b58464e12de4" name="sysplugins/smarty_internal_resource_php.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6b83b9b10540c23132a0b064cdb0d5df" name="sysplugins/smarty_internal_resource_registered.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6baa79d3fa9b71f4fba50797d13a01b1" name="sysplugins/smarty_internal_resource_stream.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="d262867cccb0087b77b550a76f481007" name="sysplugins/smarty_internal_resource_string.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3e206c623d5539cf62166424387f470b" name="sysplugins/smarty_internal_smartytemplatecompiler.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="b38a1358a41f73c3432a4301c7dfd072" name="sysplugins/smarty_internal_template.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="3cc63cab45dc7d6c75657f2bb708f054" name="sysplugins/smarty_internal_templatebase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="479db331048763eb441ec704b68c3661" name="sysplugins/smarty_internal_templatecompilerbase.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="e2cc741acbba49b6fdcc62f6eeeaf9e5" name="sysplugins/smarty_internal_templatelexer.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8a0f983b72083af6efce91b491a0867b" name="sysplugins/smarty_internal_templateparser.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8f8432aa6eacd7e9c6ee327d9bfc889e" name="sysplugins/smarty_internal_utility.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="83926a910c35130b2881cbe8c61bb0e8" name="sysplugins/smarty_internal_write_file.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="6cb36db4ae1a67ae786b186cfab33195" name="sysplugins/smarty_resource.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="831726e7553a1b53bb2fc3288e38342a" name="sysplugins/smarty_resource_custom.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="8ad5de73dbe35d0b8d304bde138e015c" name="sysplugins/smarty_resource_recompiled.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="811297e519643b4342f78aa19b681555" name="sysplugins/smarty_resource_uncompiled.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="5840e1dd8debefd38bd1392632f6d1c0" name="sysplugins/smarty_security.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="98a94f077d2453138d657cf226051e95" name="debug.tpl" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="c418baef968c31083258d364a44727c0" name="Smarty.class.php" role="php" />
+   <file baseinstalldir="/Smarty3" md5sum="5734f7d205e8217c6c53c96fea2a8be3" name="SmartyBC.class.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.9.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>3.1.8</release>
+    <api>3.1.8</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2012-03-26</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+PEAR Style Package
+   </notes>
+  </release>
+ </changelog>
+</package>

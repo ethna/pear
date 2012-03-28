@@ -3,6 +3,11 @@
     <p>Smarty3</p>
     <c>pear.ethna.jp</c>
     <r>
+        <v>3.1.8</v>
+        <s>stable</s>
+        <m>5.2.0</m>
+    </r>
+    <r>
         <v>3.1.4</v>
         <s>stable</s>
         <m>5.2.0</m>
